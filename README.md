@@ -12,6 +12,7 @@ J'ai pris l'option informatique pour pouvoir mieux m'en sortir avec et reussir Ã
 n = 3  
   
 for i in range (n):
+
   print "Hi"
   
 '''
