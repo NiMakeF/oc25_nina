@@ -14,3 +14,5 @@ for i in range (n):
 
   print ("Hi")
 ```
+![](images/kitronik-move-motor-microbit-desk.jpeg)
+
