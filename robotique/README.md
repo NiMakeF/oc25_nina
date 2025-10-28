@@ -1,16 +1,20 @@
 # oc25_nina
 
-## Présentation 
+## Présentation
 
-Je m'appelle _Nina Makeeva_ et j'étudie au **Gymnase du Bugnon** (https://www.gymnasedubugnon.ch).
+Je m'appelle _Nina Makeeva_ et j'étudie au **Gymnase du Bugnon** (<https://www.gymnasedubugnon.ch>).
 
-## Motivation 
+## Motivation
+
 J'ai pris l'option informatique pour pouvoir mieux m'en sortir avec et reussir à comprendre mieux son univers.
 
 ```
+
 n = 3  
   
 for i in range (n):
 
   print ("Hi")
 ```
+
+![](images/robot.jpeg)
