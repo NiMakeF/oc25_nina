@@ -1,0 +1,29 @@
+body{
+    font-family: Arrial, Arial, Helvetica, sans-serif ;
+}
+h1, h2, h3 {
+    color: #8044FF;
+}
+h1 {
+    text-align: center;
+}
+
+#bienvenue {
+    background-color: rgb(233, 242, 249);
+    border-radius: 10px; /*arrondit le bord*/
+}
+.imp { 
+    background-color: #c8ebe7 ;
+    border-radius: 10;
+    border-left: #13b3a0 solid 5px; /*rajoute le ptit bord*/
+}
+
+p {
+    /*border: red 5px solid;*/
+    padding: 20px 20px 20px 20px; /*espace entre texte et border, dans le sens d'une éguille d'une montre*/
+    margin: 10px 10px 10px 20px; /*espace entre diff paragraphes*/
+    line-height: 25px; /*espace entre les lignes*/
+}
+.imp > strong {
+     text-decoration: underline solid;
+}
