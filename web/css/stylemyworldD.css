@@ -2,8 +2,25 @@
 body {
     max-width: 600px;
     margin: auto;
-    background-color: rgb(225, 206, 183)
+    background-color: rgb(225, 206, 183);
+    font-family:'Times New Roman', Times, serif;
 }
 #ID {
-    font-size: 50;
+    font-weight: bold;
+    line-height: 1.8;
+}
+.famille {
+    font-weight: bold;
+    line-height: 1.8;
+}
+#cart, #veg, #animals, #char, #myth {
+    text-decoration:underline;
+}
+h4 {
+    font-weight: normal;
+    text-decoration:underline;
+}
+h4 #ID {
+    font-weight: normal;
+    text-decoration:underline;
 }
