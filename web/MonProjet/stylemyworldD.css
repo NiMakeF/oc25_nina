@@ -55,20 +55,79 @@ h4 #ID {
 }
 .titre-cote:hover {
     background-color: rgba(124, 91, 49, 0.272);
+    border-radius: 10px;
 }
 .titre-cote.active {
     background: rgb(204, 177, 143);
+    border-radius: 10px;
 }
 
 .main-contenu {
-    margin-left: 240px;
-    margin-right: auto;
-    margin-top: 20px;
+    padding-left: 240px;
+    padding-right: auto;
+    padding-top: 20px;
+    color: rgb(80, 61, 37) ;
     
 }
 
 input {
     background-color:rgb(247, 226, 201) ;
     font-family:'Times New Roman', Times, serif; 
+
+}
+input ::placeholder {
+    color: rgba(124, 92, 49, 0.947);
 }
 
+
+canvas {
+    border : solid 1px rgb(80, 61, 37);
+    background-color: rgb(247, 226, 201);
+
+    
+    
+}
+#titre {
+    color: rgb(80, 61, 37) ;
+    
+    border-radius: 10px;
+    padding: 10px;
+}
+
+p{
+    background-color: rgba(124, 91, 49, 0.272);
+    border-radius: 10px;
+    padding: 10px;
+}
+#skins, #cartee {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px rgba(80, 61, 37, 0.768);
+}
+
+#lr {
+    text-decoration: none;
+    color: rgb(80, 61, 37) ;
+}
+button{
+    color: rgba(124, 92, 49, 0.947);
+    background-color: rgb(247, 226, 201);
+    border-color:rgba(80, 61, 37, 0.67) ;
+}
+
+#patate{
+   color: rgb(80, 61, 37) ;
+    background-color: rgba(124, 91, 49, 0.272);
+    border-radius: 10px;
+    padding: 10px; 
+}
+
+#titre1 {
+    color: rgb(80, 61, 37) ;
+    background-color: rgba(124, 91, 49, 0.272);
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 230px;
+}

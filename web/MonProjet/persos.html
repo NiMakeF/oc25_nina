@@ -11,7 +11,7 @@
             <div class="haut">
                 <h1>Mon monde</h1>
             </div>
-            <a href="/web/MonProjet/carto.html" class="titre-cote"><span class="acc">Page d'accueil</span></a>
+            <a href="/web/MonProjet/pageAcueuil.html" class="titre-cote"><span class="acc">Page d'accueil</span></a>
             <a href="/web/MonProjet/carto.html" class="titre-cote"><span class="carto">Cartographie</span></a>
             <a href="/web/MonProjet/vege.html" class="titre-cote"><span class="vege">Végétation</span></a>
             <a href="/web/MonProjet/anim.html" class="titre-cote"><span class="anim">Animaux</span></a>
@@ -20,37 +20,99 @@
             <a href="/web/MonProjet/refs.html" class="titre-cote"><span class="refs">Fiche de références</span></a>
         </nav>
     </div>
-
+ <h1 id="titre1">Personnages :</h1>
     <div class="main-contenu">
                 <div class="barre">
                     <!-- <label></label> pour espace de focus -->  
-                    <input type="search" id = recherche placeholder="Nom de personnage...">
+                    <input type="search" id = "recherche" placeholder="Nom de personnage...">
                     <button onclick="searchItem()">Chercher</button>
                 </div>
             
                 <div class="resultats">
-                    <table class="res">
-                        <tbody> <th>Résultats :</th>ahfbjshefa</tbody>
-                        
+                    <h3>Résultats de la recherche :</h3>
+                    <p id="sortie"></p>
                         
                     
-                    </table>
+                    
 
                 </div>
     </div>
     <script src="/web/MonProjet/myworld.js"></script>
 
-<main class="main-contenu">
-<h3 id="char">Personnages</h3>
-            <a href="http://127.0.0.1:5500/web/ref.html">* Les références</a> <br>
+<script>
 
+    const input = document.getElementById('recherche');
+    const output = document.getElementById('sortie');
+    
+
+    function searchItem() {
+    
+      output.innerText = "" //vide le résultats de recherche
+      
+      // supprime les espaces dans la recherche (le trime le fait)
+      const query = input.value.trim();
+
+      // cherche dans le text
+      if (query) {
+        const resultat = window.find(query, false, false, false, false, false)
+        if (!resultat) {
+            output.innerText = "Information introuvable ou bien vous avez atteint la fin de la page."
+            window.getSelection().removeAllRanges(); //recommence la recherche du haut du document
+        } else {
+
+  
+
+  
+            // défini la position de la séléction trouvée
+            const selection = window.getSelection();
+            
+            // dans séléction trouve élément cherché puis le parent
+            const textNode = selection.anchorNode;
+            const element = textNode.parentElement;
+
+            //  cherche bloc où se trouve le parent et défini
+            const container = element.closest('details');
+         
+            // ouvre le bloc (details) et descend vers 
+            if (container) {
+            container.open = true;
+            textNode.scrollIntoView({ behavior: "smooth", block: "center" });
+    
+            
+            }
+        }
+        
+        
+
+    
+      } else {
+        output.innerText = "Écrivez la demande.";
+      }
+    }
+//si l'evenement clavier "enter" pressé lance la fonction
+    input.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+
+            searchItem();
+
+            }
+
+        });
+ 
+  </script>
+
+<main class="main-contenu" id="personnages">
+<h3 id="char">Personnages</h3>
+            
+<div id="contenu">
+            
 <!--MORIARTYS-->      
-            <details>
+            
                 <summary class="famille">La famillle Moriarty</summary> 
                 <!--ALEX-->
                 
                 <details>
-                <summary><li>Alexeï Mikhaïlov Andreev</li></summary>
+                <summary>Alexeï Mikhaïlov Andreev</summary>
                  
 <p id="ID"> Identité : </p>
 Surnom : Alex <br>
@@ -85,8 +147,8 @@ Déteste : Religion sous toute forme, les personnes trop hautaines<br>
 <p id="ID">Infos supplémentaires :</p>
 Liens : Mari de Mélusine, père de Eliot et Luna, meilleur ami de Phil
 <br> <br>
-
-                </details>
+            </details>
+                
                 <!--MELU-->
                 <details>
                     <summary> Mélusine Jeanne Moriarty</summary>
@@ -288,11 +350,11 @@ Déteste : <br>
 <p id="ID">Infos supplémentaires :</p>
 <br>
                 </details>
-            </details>
+            
             <br>
           
 <!--HOLMES-->
-            <details>
+            
                 <summary class="famille">La famille Holmes</summary>
                     <!--PHIL-->
                     <details>
@@ -329,18 +391,18 @@ Déteste : <br>
 <p id="ID">Infos supplémentaires :</p>
 <br>
                     </details>
-                    <!--KAren...-->
                     
-            </details>
             <br>
 
 <!--WILSONS-->            
-            <details>
+            
                 <summary class="famille">La famille Wilson</summary>
                     <!--OWLIe-->
                     <details>
                         <summary>Owen Wilson</summary>
 
+                      
+                      <p id="ID"> Identité : </p>
                         Surnom : <br>
 Âge : <br>
 Anniversaire : <br>
@@ -375,7 +437,7 @@ Déteste : <br>
                     <!--LE SERPENT-->
                     <details>
                         <summary>Nael Abera</summary>
-
+<p id="ID"> Identité : </p>
                         Surnom : <br>
 Âge : <br>
 Anniversaire : <br>
@@ -407,16 +469,16 @@ Déteste : <br>
 <p id="ID">Infos supplémentaires :</p>
 <br>
                     </details>
-            </details>
+           
             <br>
 
 <!--SHAW-->
-            <details>
+            
                 <summary class="famille">La famille Shaw</summary>
                     <!--le perdu-->
                     <details>
                         <summary>Cypress Shaw</summary>
-
+<p id="ID"> Identité : </p>
                         Surnom : <br>
 Âge : <br>
 Anniversaire : <br>
@@ -451,7 +513,7 @@ Déteste : <br>
                     <!--mouton-->
                     <details>
                         <summary>Felix Shaw</summary>
-
+<p id="ID"> Identité : </p>
                         Surnom : <br>
 Âge : <br>
 Anniversaire : <br>
@@ -484,17 +546,17 @@ Déteste : <br>
 <br>
                     </details>
 
-            </details>
+            
             <br>
 
            
 <!--COLLEY-->
-            <details>
+            
                 <summary class="famille">La famille Colley</summary>
                     <!--coffeeeeeee...-->
                     <details>
                         <summary>Valériane Anne Colley</summary>
-
+<p id="ID"> Identité : </p>
                         Surnom : <br>
 Âge : <br>
 Anniversaire : <br>
@@ -529,7 +591,7 @@ Déteste : <br>
                     <!--bon euh... Robyn quoi-->
                     <details>
                         <summary>Robyn Colley</summary>
-
+<p id="ID"> Identité : </p>
                         Surnom : <br>
 Âge : <br>
 Anniversaire : <br>
@@ -562,18 +624,18 @@ Déteste : <br>
 <br>
                     </details>
 
-            </details>
+           
             <br>
            
 
         
 <!--AUTRES-->
-            <details>
+            
                 <summary class="famille">D'autres personnages</summary>
                     <!--ZAZA LE POICHON-->
                     <details>
                         <summary>Isaac Jacobs</summary>
-
+<p id="ID"> Identité : </p>
                         Surnom : <br>
 Âge : <br>
 Anniversaire : <br>
@@ -608,7 +670,7 @@ Déteste : <br>
                     <!--SHASHA0.1-->
                     <details>
                         <summary>Alexandre Pshenitsin</summary>
-
+<p id="ID"> Identité : </p>
                         Surnom : <br>
 Âge : <br>
 Anniversaire : <br>
@@ -643,7 +705,7 @@ Déteste : <br>
                     <!--LE prof-->
                     <details>
                         <summary>Léandre Aubry</summary>
-
+<p id="ID"> Identité : </p>
                         Surnom : <br>
 Âge : <br>
 Anniversaire : <br>
@@ -675,12 +737,8 @@ Déteste : <br>
 <p id="ID">Infos supplémentaires :</p>
 <br>
                     </details>
-                    <!--le chouchou muet-->
-                    <details>
-                        <summary>Kyle </summary>
-                    </details>
 
-            </details>
+           
             <br>
 
             
@@ -688,26 +746,28 @@ Déteste : <br>
             <details>
                 <summary class="famille">Animaux</summary>
 
-                    <h4> Patate :</h4> Tigre blanc 
-                    <h4>Yuya : </h4> Guéparde 
-                    <h4>Yaourt :</h4> Mamba noir 
-                    <h4>Koya :</h4> Loup noir 
-                    <h4>Gigi :</h4> Chouette 
-                    <h4>Shawn :</h4> Mouton à nez noir
-                    <h4>Picasso :</h4> Cochon d'Inde
-                    <h4>Da Vinci :</h4> Cochon d'Inde
-                    <h4>Happy :</h4> Requin blanc 
-                    <h4>Marie Curie :</h4> Machot papou  
-                    <h4>Cassis :</h4> Dragon de feu 
-                    <h4>Coco :</h4> Dragon de glace 
-                    <h4>Wren :</h4> Esprit de feu
-                    <h4>Tiki :</h4> Chauve souris de Lyle
-                    <h4>Capucine :</h4> Renarde 
-                    <h4>Brevi :</h4> Grenouille de pluie du désert
-                    <h4>Procy :</h4> Raton laveur 
+                    <h4 id="patate"> Patate :</h4> Race : Tigre blanc 
+                    <h4 id="patate">Yuya : </h4> Race : Guéparde 
+                    <h4 id="patate">Yaourt :</h4> Race : Mamba noir 
+                    <h4 id="patate">Koya :</h4> Race : Loup noir 
+                    <h4 id="patate">Gigi :</h4> Race : Chouette 
+                    <h4 id="patate">Shawn :</h4> Race : Mouton à nez noir
+                    <h4 id="patate">Picasso :</h4> Race : Cochon d'Inde
+                    <h4 id="patate">Da Vinci :</h4> Race : Cochon d'Inde
+                    <h4 id="patate">Happy :</h4>Race : Requin blanc 
+                    <h4 id="patate">Marie Curie :</h4>Race : Machot papou  
+                    <h4 id="patate">Cassis :</h4> Race : Dragon de feu 
+                    <h4 id="patate">Coco :</h4> Race : Dragon de glace
+                    <h4 id="patate">Wren :</h4> Race : Esprit de feu
+                    <h4 id="patate">Tiki :</h4>Race : Chauve souris de Lyle
+                    <h4 id="patate">Capucine :</h4> Race : Renarde 
+                    <h4 id="patate">Brevi :</h4> Race : Grenouille de pluie du désert
+                    <h4 id="patate">Procy :</h4>Race : Raton laveur 
 
             </details>
-
+</div>
+            
+<br><a href="/web/MonProjet/refs.html" id="lr"><h4>* Les références</h4></a> <br>
         </main>
 
 </body>
