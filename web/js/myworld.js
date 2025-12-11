@@ -20,7 +20,7 @@ var y = 1;
 
 
 function init() {
-    img_img.src = "../images/felix.png";
+    img_img.src = "images/felix.png";
     window.requestAnimationFrame(draw);
 }
 
