@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsufosmm026gj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v321d"]
+albedo_color = Color(0.604453, 0.394726, 0.881885, 1)
+albedo_texture_force_srgb = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_88gup"]
+albedo_color = Color(0.32101, 0.550067, 0.44102, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bisa2"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4o3f6"]
+albedo_color = Color(0.254959, 0.543987, 0.464697, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5vuv"]
+albedo_color = Color(0.458489, 0.813855, 0.571359, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+material_override = SubResource("StandardMaterial3D_v321d")
+size = Vector3(10, 10, 10)
+material = SubResource("StandardMaterial3D_88gup")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.273114, 0.26729, 0.54575)
+material_override = SubResource("StandardMaterial3D_bisa2")
+operation = 2
+size = Vector3(9.5, 9.5, 9)
+material = SubResource("StandardMaterial3D_4o3f6")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.707483, 0.792962, -4.21245)
+operation = 2
+size = Vector3(5, 3, 3)
+material = SubResource("StandardMaterial3D_v5vuv")

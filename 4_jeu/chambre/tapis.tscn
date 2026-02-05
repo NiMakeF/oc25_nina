@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkparvw5d7nf0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tk0ko"]
+albedo_color = Color(0.374373, 0.620374, 0.500832, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+
+[node name="tapis" type="CSGBox3D" parent="CSGCombiner3D"]
+size = Vector3(5.58386, 0.0994873, 6.03174)
+material = SubResource("StandardMaterial3D_tk0ko")
