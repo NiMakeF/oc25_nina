@@ -1,0 +1,132 @@
+[gd_scene load_steps=10 format=3 uid="uid://b6r3aybjrtc7c"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mb7ju"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kqe62"]
+particle_flag_disable_z = true
+angle_min = -397.8
+angle_max = -237.8
+spread = 90.0
+initial_velocity_max = 160.0
+gravity = Vector3(0, 98, 0)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bkak3"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(1, 1.48, 1)
+emission_shape = 1
+emission_sphere_radius = 74.24
+gravity = Vector3(0, 98, 0)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1g83g"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(1, 1.48, 1)
+direction = Vector3(1, 1, 0)
+spread = 180.0
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, 98, 0)
+color = Color(0.658315, 0.310231, 0.216952, 1)
+
+[sub_resource type="Gradient" id="Gradient_26dmw"]
+offsets = PackedFloat32Array(0, 0.915323, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.586331, 0.338112, 0.806958, 1, 0.615633, 0.384995, 0.820632, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jxgxf"]
+gradient = SubResource("Gradient_26dmw")
+
+[sub_resource type="Curve" id="Curve_mb7ju"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.622517, 0.352575), 0.0, 0.0, 0, 0, Vector2(0.950331, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_kqe62"]
+curve = SubResource("Curve_mb7ju")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_w4a7f"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(1, 1.48, 1)
+direction = Vector3(1, 1, 0)
+spread = 180.0
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, 98, 0)
+scale_curve = SubResource("CurveTexture_kqe62")
+color = Color(0.631373, 0.858824, 0.415686, 1)
+color_ramp = SubResource("GradientTexture1D_jxgxf")
+
+[node name="vfx2D" type="Node2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 16
+lifetime = 2.0
+process_material = SubResource("ParticleProcessMaterial_mb7ju")
+
+[node name="Label" type="Label" parent="GPUParticles2D"]
+offset_left = -54.0
+offset_top = -48.0
+offset_right = 54.0
+offset_bottom = -18.0
+text = "point source"
+metadata/_edit_use_anchors_ = true
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="."]
+position = Vector2(519, 0)
+amount = 80
+lifetime = 2.0
+process_material = SubResource("ParticleProcessMaterial_kqe62")
+
+[node name="Label" type="Label" parent="GPUParticles2D3"]
+offset_left = -54.0
+offset_top = -48.0
+offset_right = 54.0
+offset_bottom = -18.0
+text = "point source"
+metadata/_edit_use_anchors_ = true
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+position = Vector2(265, 1)
+amount = 1000
+amount_ratio = 0.3214
+process_material = SubResource("ParticleProcessMaterial_bkak3")
+
+[node name="Label" type="Label" parent="GPUParticles2D2"]
+offset_left = -54.0
+offset_top = -48.0
+offset_right = 54.0
+offset_bottom = -18.0
+text = "spawn sphere 1000 part/1s
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="GPUParticles2D4" type="GPUParticles2D" parent="."]
+position = Vector2(-1, 269)
+amount = 1000
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_1g83g")
+
+[node name="Label" type="Label" parent="GPUParticles2D4"]
+offset_left = -54.0
+offset_top = -48.0
+offset_right = 54.0
+offset_bottom = -18.0
+text = "spawn nitial velocity 100 expolivness 0.9 80 part
+
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="GPUParticles2D5" type="GPUParticles2D" parent="."]
+position = Vector2(344, 255)
+amount = 1000
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_w4a7f")
+
+[node name="Label" type="Label" parent="GPUParticles2D5"]
+offset_left = -54.0
+offset_top = -48.0
+offset_right = 54.0
+offset_bottom = -18.0
+text = "spawn nitial velocity 100 expolivness 0.9 80 part
+
+"
+metadata/_edit_use_anchors_ = true
