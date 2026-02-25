@@ -69,23 +69,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 12)
 mesh = SubResource("CylinderMesh_lquwl")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Cylnders"]
-transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 13, 0, -18)
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 13, 0, -18)
 mesh = SubResource("CylinderMesh_lquwl")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="Cylnders"]
-transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 13, 0, 14)
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 13, 0, 14)
 mesh = SubResource("CylinderMesh_lquwl")
 
 [node name="SpawnPath" type="Path3D" parent="."]
 curve = SubResource("Curve3D_272bh")
 
 [node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath"]
-transform = Transform3D(-0.0153959, 0, -0.999881, 0, 1, 0, 0.999881, 0, -0.0153959, -12.9294, 0, -18.1347)
+transform = Transform3D(-0.015396618, 0, -0.9998809, 0, 1, 0, 0.9998809, 0, -0.015396618, -12.9294, 0, -18.1347)
 
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
-
-[node name="Mob" parent="." instance=ExtResource("2_h2yge")]
 
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
