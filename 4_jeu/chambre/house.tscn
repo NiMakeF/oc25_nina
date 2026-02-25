@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://s02s5evtpm2v"]
+
+[ext_resource type="PackedScene" uid="uid://bsufosmm026gj" path="res://room.tscn" id="1_vy7fe"]
+[ext_resource type="PackedScene" uid="uid://bkparvw5d7nf0" path="res://tapis.tscn" id="2_10qhy"]
+[ext_resource type="PackedScene" uid="uid://xsbboawxto3p" path="res://bed.tscn" id="3_2y50f"]
+[ext_resource type="PackedScene" uid="uid://bg24ytshvdu6r" path="res://table.tscn" id="4_obbqb"]
+[ext_resource type="PackedScene" uid="uid://dorxagg82yipk" path="res://lamp.tscn" id="5_kjvky"]
+
+[node name="house" type="Node3D"]
+
+[node name="room" parent="." instance=ExtResource("1_vy7fe")]
+
+[node name="room2" parent="." instance=ExtResource("1_vy7fe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.91547, 0, 0)
+
+[node name="tapis" parent="." instance=ExtResource("2_10qhy")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -8.13465, -4.41462, -1.12243)
+size = Vector3(3.12987, 0.0994873, 5.83167)
+
+[node name="bed" parent="." instance=ExtResource("3_2y50f")]
+transform = Transform3D(-6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, -12.9085, -4.0104, -2.08755)
+
+[node name="table" parent="." instance=ExtResource("4_obbqb")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.99554, -7.3508, -0.361848)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.107999, -0.911696, 0.396417, 6.97195e-08, 0.398749, 0.91706, -0.994151, 0.099042, -0.0430646, 0.0517261, 20.7098, -0.0323572)
+light_color = Color(0.560089, 0.567086, 0.77586, 1)
+shadow_enabled = true
+shadow_bias = 0.0
+shadow_transmittance_bias = -16.0
+shadow_blur = 9.16
+
+[node name="lamp" parent="." instance=ExtResource("5_kjvky")]
+transform = Transform3D(1, 0, 0, 0, 1.2, 0, 0, 0, 1, -6.06904, -4.0867, -2.87564)

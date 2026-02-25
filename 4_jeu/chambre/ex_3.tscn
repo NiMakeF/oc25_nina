@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://cibf7hvf6t60c"]
+
+[ext_resource type="PackedScene" uid="uid://xsbboawxto3p" path="res://bed.tscn" id="1_l3qwd"]
+[ext_resource type="PackedScene" uid="uid://bg24ytshvdu6r" path="res://table.tscn" id="2_i25js"]
+[ext_resource type="PackedScene" uid="uid://dorxagg82yipk" path="res://lamp.tscn" id="3_py5gm"]
+[ext_resource type="PackedScene" uid="uid://bkparvw5d7nf0" path="res://tapis.tscn" id="4_b7s1a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hli18"]
+albedo_color = Color(1, 0.756863, 0.447059, 1)
+
+[node name="ex3" type="Node3D"]
+
+[node name="Room" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+flip_faces = true
+size = Vector3(10, 10, 10)
+material = SubResource("StandardMaterial3D_hli18")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.599487, 0.588135, -4.84643)
+operation = 2
+size = Vector3(4.98706, 2.96436, 1)
+
+[node name="bed" parent="." instance=ExtResource("1_l3qwd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -4.5, -4)
+
+[node name="table" parent="." instance=ExtResource("2_i25js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -8, 4)
+
+[node name="lamp" parent="." instance=ExtResource("3_py5gm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0031, 0.191134, -3.60732)
+
+[node name="tapis" parent="." instance=ExtResource("4_b7s1a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.29193, -4.94893, 0.15077)
