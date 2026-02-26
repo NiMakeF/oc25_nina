@@ -89,4 +89,9 @@ Les images sont pas mal mais les élèves semblent trop heureux leur de la réso
 Les élèves devraient quand même très heureux dans la deuxième partie de l'image (à droite), c'est leur réception de prix. Est-ce que tu pourrais faire un mélange de tes deux images avec la partie gauche prise de la deuxième et la partie droite de la première.
 
 
+<img width="1536" height="1024" alt="Math competition triumph_ teamwork and victory" src="https://github.com/user-attachments/assets/82287d55-1d9e-4772-86bd-e9e8bd7709d1" />
 
+
+Parfait merci
+
+Avec plaisir ! Si tu as besoin d’ajuster encore l’article ou les images avant publication sur le site du Gymnase du Bugnon (par exemple le format, la longueur ou le ton), n’hésite pas à me le dire. Bonne publication !
