@@ -16,17 +16,17 @@ La conférence de Dartmouth en 1956, à laquelle il participe, est considérée 
 
 Quels sont les developpements technologiques récents qui ont permis les IA génératives ?
 
-a) L’apprentissage profond (deep learning)
+1) L’apprentissage profond (deep learning)
 Les IA modernes utilisent des réseaux de neurones artificiels à plusieurs couches.
 Leur efficacité a progressé grâce :
 à de nouveaux algorithmes,
 à d’énormes quantités de données (Internet),
 à une forte puissance de calcul.
-b) L’architecture Transformer
+2) L’architecture Transformer
 Introduite vers 2017.
 Permet de mieux comprendre le contexte grâce à un mécanisme d’attention.
 Elle est à la base des modèles modernes comme les grands modèles de langage.
-c) Les modèles d’IA générative
+3) Les modèles d’IA générative
 L’application des Transformers a permis la création d’IA capables de produire :
 textes,
 images,
