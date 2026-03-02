@@ -9,3 +9,4 @@ L’attente des résultats a été un moment particulièrement marquant. Les qua
 Au-delà du résultat, les élèves retiennent surtout le plaisir d’avoir travaillé ensemble. Cette victoire restera pour eux le souvenir d’une expérience stimulante et enrichissante.
 <img width="1536" height="1024" alt="Math competition triumph_ teamwork and victory" src="https://github.com/user-attachments/assets/b239d545-96ac-483b-aae5-c3d8a3e60143" />
 
+Commentaire : L'IA a bien réussi, selon moi la partie écrite de l'article. Les mots choisis donnent à l'article un effet professionel et propre. Mais le travail sur les photos me déplait. Il est plus difficile d'obtenir le résultat voulu, avec une possibilité d'erreures qui rendent la photo impossible à reproduire dans la réalité et soouvent il est compliqué de créer une description assez précise pour que l'IA créé une image satisfesante.
