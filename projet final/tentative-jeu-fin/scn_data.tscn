@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://dw5nw2qqenubw"]
+
+[ext_resource type="PackedScene" uid="uid://2swb26hycl76" path="res://table.tscn" id="1_fgr3v"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="sol" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.769394, 0, -13.190796)
+size = Vector3(31.538788, 1, 36.38159)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.538147, 3, 4.88)
+size = Vector3(29.076294, 5, 0.3)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.0000005, 3, -9.5863085)
+size = Vector3(28.932617, 5, 0.3)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18812256, 2.5, 0.17739797)
+size = Vector3(0.6762451, 6, 9.319824)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.578309, 2.5, -4.7892566)
+size = Vector3(0.6762451, 6, 7.4676514)
+
+[node name="table" parent="." instance=ExtResource("1_fgr3v")]
+transform = Transform3D(-8.6985665e-08, 0, 1.99, 0, 1.99, 0, -1.99, 0, -8.6985665e-08, -3.8627942, 0.50959635, 3.6762748)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2143435, 1.0668595, 0)
+light_color = Color(0.3018971, 0.52847415, 0.48430008, 1)
+light_energy = 3.227
+light_indirect_energy = 13.454
+light_volumetric_fog_energy = 0.0
+omni_range = 9.604445
