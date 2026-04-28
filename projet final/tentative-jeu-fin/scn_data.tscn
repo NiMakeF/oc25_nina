@@ -1,36 +1,72 @@
-[gd_scene load_steps=2 format=3 uid="uid://dw5nw2qqenubw"]
+[gd_scene load_steps=3 format=3 uid="uid://dw5nw2qqenubw"]
 
 [ext_resource type="PackedScene" uid="uid://2swb26hycl76" path="res://table.tscn" id="1_fgr3v"]
+[ext_resource type="Script" uid="uid://c6egunw73t6gj" path="res://camera_3d.gd" id="2_o1euj"]
 
-[node name="Node3D" type="Node3D"]
+[node name="scène 1" type="Node3D"]
 
 [node name="sol" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.769394, 0, -13.190796)
-size = Vector3(31.538788, 1, 36.38159)
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7694, 0, -13.1908)
+use_collision = true
+size = Vector3(31.5388, 1, 36.3816)
+
+[node name="plafond" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7694, 5.96171, -13.1908)
+visible = false
+use_collision = true
+size = Vector3(31.5388, 1, 36.3816)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.538147, 3, 4.88)
-size = Vector3(29.076294, 5, 0.3)
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.53815, 3, 4.88)
+use_collision = true
+size = Vector3(29.0763, 5, 0.3)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.0000005, 3, -9.5863085)
-size = Vector3(28.932617, 5, 0.3)
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 3, -9.58631)
+use_collision = true
+size = Vector3(28.9326, 5, 0.3)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18812256, 2.5, 0.17739797)
-size = Vector3(0.6762451, 6, 9.319824)
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.188123, 2.5, 0.177398)
+use_collision = true
+size = Vector3(0.676245, 6, 9.31982)
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.578309, 2.5, -4.7892566)
-size = Vector3(0.6762451, 6, 7.4676514)
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.34448, 2.5, -4.78926)
+use_collision = true
+size = Vector3(0.676245, 6, 9)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.34448, 2.5, 1.21074)
+use_collision = true
+size = Vector3(0.676245, 6, 3)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.57831, 2.5, -3.55543)
+use_collision = true
+size = Vector3(0.676245, 6, 9)
 
 [node name="table" parent="." instance=ExtResource("1_fgr3v")]
-transform = Transform3D(-8.6985665e-08, 0, 1.99, 0, 1.99, 0, -1.99, 0, -8.6985665e-08, -3.8627942, 0.50959635, 3.6762748)
+physics_interpolation_mode = 1
+transform = Transform3D(-8.69857e-08, 0, 1.99, 0, 1.99, 0, -1.99, 0, -8.69857e-08, -3.86279, 0.509596, 3.67627)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2143435, 1.0668595, 0)
-light_color = Color(0.3018971, 0.52847415, 0.48430008, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21434, 1.06686, 0)
+light_color = Color(0.301897, 0.528474, 0.4843, 1)
 light_energy = 3.227
 light_indirect_energy = 13.454
 light_volumetric_fog_energy = 0.0
-omni_range = 9.604445
+omni_range = 9.60445
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.515038, -0.0866221, 0.852779, 0, 0.994881, 0.101056, -0.857167, 0.0520478, -0.512401, -2, 3, 1)
+fov = 70.0
+script = ExtResource("2_o1euj")

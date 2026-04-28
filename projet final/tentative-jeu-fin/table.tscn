@@ -4,7 +4,7 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5i0k"]
 shading_mode = 2
-albedo_color = Color(0.8884341, 0.91004944, 0.850926, 1)
+albedo_color = Color(0.888434, 0.910049, 0.850926, 1)
 metallic = 0.8
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kl0hw"]
@@ -17,16 +17,16 @@ albedo_color = Color(0.59, 0.5841, 0.5841, 1)
 albedo_texture = SubResource("CanvasTexture_jd0nb")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vjl2i"]
-albedo_color = Color(0.22130889, 0.66725445, 0.69179106, 1)
+albedo_color = Color(0.221309, 0.667254, 0.691791, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_67vji"]
-albedo_color = Color(0.82107466, 0.75170004, 0.62075174, 1)
+albedo_color = Color(0.821075, 0.7517, 0.620752, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jry6c"]
 albedo_color = Color(1, 0.19, 0.19, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhh2s"]
-albedo_color = Color(0.81960785, 0.7529412, 0.61960787, 1)
+albedo_color = Color(0.819608, 0.752941, 0.619608, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_64sdq"]
 albedo_color = Color(0.2, 0.2, 0.2, 1)
@@ -34,7 +34,7 @@ metallic = 0.5
 metallic_specular = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ormek"]
-albedo_color = Color(0.14879146, 0.3452004, 0.36468622, 1)
+albedo_color = Color(0.148791, 0.3452, 0.364686, 1)
 metallic = 0.5
 metallic_specular = 1.0
 
@@ -47,6 +47,7 @@ metallic_specular = 1.0
 
 [node name="haut" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.4995, 0)
+use_collision = true
 size = Vector3(2, 0.05, 1)
 material = SubResource("StandardMaterial3D_v5i0k")
 
@@ -95,8 +96,9 @@ size = Vector3(0.129395, 0.151306, 0.99794)
 material = SubResource("StandardMaterial3D_v5i0k")
 
 [node name="panche travail" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21128258, 0.523922, 0.10490327)
-size = Vector3(0.85943705, 0.0136719, 0.682617)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.211283, 0.523922, 0.104903)
+use_collision = true
+size = Vector3(0.859437, 0.0136719, 0.682617)
 material = SubResource("StandardMaterial3D_kl0hw")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="panche travail"]
@@ -110,27 +112,27 @@ size = Vector3(0.201447, 0.001, 0.261658)
 material = SubResource("StandardMaterial3D_xnpc2")
 
 [node name="crayon" type="CSGCylinder3D" parent="panche travail"]
-transform = Transform3D(-8.0366844e-05, 1.1497344, -0.7988184, -1.4, -9.78605e-05, 0, -5.5837692e-05, 0.7988184, 1.1497344, -0.49867624, 0.011501908, -0.108072944)
+transform = Transform3D(-8.03668e-05, 1.14973, -0.798818, -1.4, -9.78605e-05, 0, -5.58377e-05, 0.798818, 1.14973, -0.498676, 0.0115019, -0.108073)
 radius = 0.00488281
-height = 0.06942747
+height = 0.0694275
 material = SubResource("StandardMaterial3D_vjl2i")
 
 [node name="CSGCylinder3D2" type="CSGCylinder3D" parent="panche travail/crayon"]
-transform = Transform3D(1, -3.637979e-12, 0, 1.8189894e-12, 1, 0, 0, 0, 1, -7.250905e-05, 0.048771195, 2.9694289e-05)
+transform = Transform3D(1, -3.63798e-12, 0, 1.81899e-12, 1, 0, 0, 0, 1, -7.25091e-05, 0.0487712, 2.96943e-05)
 radius = 0.00292969
-height = 0.009956837
+height = 0.00995684
 cone = true
 material = SubResource("StandardMaterial3D_vjl2i")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="panche travail/crayon"]
-transform = Transform3D(1, -3.637979e-12, 0, 1.8189894e-12, 1, 0, 0, 0, 1, -7.247925e-05, 0.044163186, 2.9694289e-05)
+transform = Transform3D(1, -3.63798e-12, 0, 1.81899e-12, 1, 0, 0, 0, 1, -7.24792e-05, 0.0441632, 2.96943e-05)
 radius = 0.005
-height = 0.01917266
+height = 0.0191727
 cone = true
 material = SubResource("StandardMaterial3D_67vji")
 
 [node name="crayon2" type="CSGCylinder3D" parent="panche travail"]
-transform = Transform3D(0.00025405115, 0.56066793, 1.2828295, -1.4, 1.9632178e-05, 0.0002686752, 8.9609166e-05, -1.2828295, 0.56066793, 0.032652676, 0.028422952, 0.12943912)
+transform = Transform3D(0.000254051, 0.560668, 1.28283, -1.4, 1.96322e-05, 0.000268675, 8.96092e-05, -1.28283, 0.560668, 0.0326527, 0.028423, 0.129439)
 radius = 0.00488281
 height = 0.0773315
 material = SubResource("StandardMaterial3D_jry6c")
@@ -150,42 +152,43 @@ cone = true
 material = SubResource("StandardMaterial3D_bhh2s")
 
 [node name="ordi" type="CSGBox3D" parent="."]
-transform = Transform3D(0.67378885, 0, 0.4312871, 0, 0.8, 0, -0.4312871, 0, 0.67378885, 0.042007953, 0.5492827, 0.015281081)
-size = Vector3(0.41381836, 0.016967773, 0.28216553)
+transform = Transform3D(0.673789, 0, 0.431287, 0, 0.8, 0, -0.431287, 0, 0.673789, 0.042008, 0.549283, 0.0152811)
+use_collision = true
+size = Vector3(0.413818, 0.0169678, 0.282166)
 material = SubResource("StandardMaterial3D_64sdq")
 
 [node name="ordi2" type="CSGBox3D" parent="ordi"]
-transform = Transform3D(1, 0, 0, 0, 0.65724385, 0.7536783, 0, -0.7536783, 0.65724385, 0.0007285327, 0.12171346, -0.05174023)
-size = Vector3(0.41381836, 0.016967773, 0.28216553)
+transform = Transform3D(1, 0, 0, 0, 0.657244, 0.753678, 0, -0.753678, 0.657244, 0.000728533, 0.121713, -0.0517402)
+size = Vector3(0.413818, 0.0169678, 0.282166)
 material = SubResource("StandardMaterial3D_64sdq")
 
 [node name="ordi3" type="CSGBox3D" parent="ordi/ordi2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00016784668, -0.010861129, 0.007687092)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000167847, -0.0108611, 0.00768709)
 operation = 2
-size = Vector3(0.37423706, 0.016967773, 0.23301697)
+size = Vector3(0.374237, 0.0169678, 0.233017)
 material = SubResource("StandardMaterial3D_ormek")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="ordi/ordi2"]
-transform = Transform3D(-0.060000006, 1.2656318e-15, -9.0597485e-09, 0, 0.02, 2.7939677e-08, 9.0597485e-09, 8.381903e-09, -0.060000002, 0.0071269274, 0.014635861, -0.009031653)
+transform = Transform3D(-0.06, 1.26563e-15, -9.05975e-09, 0, 0.02, 2.79397e-08, 9.05975e-09, 8.3819e-09, -0.06, 0.00712693, 0.0146359, -0.00903165)
 operation = 2
 material = SubResource("StandardMaterial3D_ibia0")
 
 [node name="CSGSphere3D2" type="CSGSphere3D" parent="ordi/ordi2"]
-transform = Transform3D(-0.01, 1.0435876e-15, -4.529874e-09, -1.11022256e-16, 0.02, 1.2572855e-08, 1.5099579e-09, 8.381903e-09, -0.03, 0.021019578, 0.010370493, 0.027002275)
+transform = Transform3D(-0.01, 1.04359e-15, -4.52987e-09, -1.11022e-16, 0.02, 1.25729e-08, 1.50996e-09, 8.3819e-09, -0.03, 0.0210196, 0.0103705, 0.0270023)
 operation = 2
 material = SubResource("StandardMaterial3D_ibia0")
 
 [node name="CSGSphere3D3" type="CSGSphere3D" parent="ordi/ordi2"]
-transform = Transform3D(-0.010000003, 1.0435878e-15, -4.5298747e-09, -1.110223e-16, 0.02, 1.5832484e-08, 1.5099579e-09, 8.381903e-09, -0.030000003, -0.006860435, 0.010370553, 0.027002275)
+transform = Transform3D(-0.01, 1.04359e-15, -4.52987e-09, -1.11022e-16, 0.02, 1.58325e-08, 1.50996e-09, 8.3819e-09, -0.03, -0.00686044, 0.0103706, 0.0270023)
 operation = 2
 material = SubResource("StandardMaterial3D_ibia0")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="ordi"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010035634, 0.01606524, 0.01575324)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00100356, 0.0160652, 0.0157532)
 operation = 2
-size = Vector3(0.3587799, 0.030462403, 0.21939087)
+size = Vector3(0.35878, 0.0304624, 0.219391)
 material = SubResource("StandardMaterial3D_64sdq")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02208455, 0.49824625, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0220845, 0.498246, 0)
 visible = false
