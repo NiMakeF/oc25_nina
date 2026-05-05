@@ -76,6 +76,7 @@ light_volumetric_fog_energy = 0.0
 omni_range = 9.60445
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+disable_mode = 2
 script = ExtResource("3_7cgif")
 
 [node name="LaCam" type="Camera3D" parent="CharacterBody3D"]
