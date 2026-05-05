@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dw5nw2qqenubw"]
+[gd_scene load_steps=5 format=3 uid="uid://dw5nw2qqenubw"]
 
 [ext_resource type="PackedScene" uid="uid://2swb26hycl76" path="res://table.tscn" id="1_fgr3v"]
 [ext_resource type="Script" uid="uid://c6egunw73t6gj" path="res://camera_3d.gd" id="2_o1euj"]
+[ext_resource type="Script" uid="uid://blyhpgkkgqtx3" path="res://character_body_3d.gd" id="3_7cgif"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_elnyt"]
 
 [node name="scène 1" type="Node3D"]
 
@@ -42,9 +45,15 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.3444
 use_collision = true
 size = Vector3(0.676245, 6, 9)
 
+[node name="CSGBox3D8" type="CSGBox3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -1.65552, 2.5, -8.78926)
+use_collision = true
+size = Vector3(0.676245, 6, 7)
+
 [node name="CSGBox3D7" type="CSGBox3D" parent="."]
 physics_interpolation_mode = 1
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.34448, 2.5, 1.21074)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.42158, 2.5, 1.21074)
 use_collision = true
 size = Vector3(0.676245, 6, 3)
 
@@ -66,7 +75,17 @@ light_indirect_energy = 13.454
 light_volumetric_fog_energy = 0.0
 omni_range = 9.60445
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.515038, -0.0866221, 0.852779, 0, 0.994881, 0.101056, -0.857167, 0.0520478, -0.512401, -2, 3, 1)
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("3_7cgif")
+
+[node name="LaCam" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(-0.515038, -0.0866221, 0.852779, 0, 0.994881, 0.101056, -0.857167, 0.0520478, -0.512402, -2, 3, 1)
 fov = 70.0
 script = ExtResource("2_o1euj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+shape = SubResource("CylinderShape3D_elnyt")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
