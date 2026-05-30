@@ -1,0 +1,1682 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxyjahnfx7hkr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_skhh0"]
+albedo_color = Color(0.46, 0.46, 0.46, 1)
+metallic = 0.65
+roughness = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i5jx0"]
+albedo_color = Color(0.871141, 0.8711411, 0.8711411, 1)
+metallic = 1.0
+roughness = 0.41
+refraction_enabled = true
+
+[sub_resource type="Curve3D" id="Curve3D_j0snl"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 2.642411, 2.4734654, -0.23408675, -0.2953428, 0.23427415, -0.6167481, 0.2953428, -0.23427415, 0.6167481, 1.2249011, 2.2132726, 0.7338319, 0.005982399, -0.017907262, 0.021623373, -0.005982399, 0.017907262, -0.021623373, 1.05441, 1.7932323, 1.0836892, 0.059479713, 0.42017436, 0.14964342, -0.059479713, -0.42017436, -0.14964342, 1.064672, 1.663301, 0.6583047, -0.48555374, 0.3593886, -0.17262888, 0.48555374, -0.3593886, 0.17262888, 1.5898228, 1.2446134, 1.9775681, 0.09008622, 0.10580778, 0.25847244, -0.09008622, -0.10580778, -0.25847244, 1.3813932, 1.2140152, 1.0692496, -0.27512813, 0.08404505, 0.22995043, 0.27512813, -0.08404505, -0.22995043, 1.7430748, 0.26107597, 0.82516265, 0, 0, 0, 0, 0, 0, 2.810988, -0.12661952, -0.046437025),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j0snl"]
+albedo_color = Color(0.4475749, 0.65445644, 0, 1)
+
+[node name="data" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.36058164, 1, -0.72208214)
+size = Vector3(4, 6, 2.4541016)
+material = SubResource("StandardMaterial3D_skhh0")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9598924, 2.414802, 0.10169554)
+size = Vector3(1.8, 0.97, 2.454)
+material = SubResource("StandardMaterial3D_i5jx0")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.92392135, 2.414802, 0.10169554)
+size = Vector3(1.8, 0.97, 2.454)
+material = SubResource("StandardMaterial3D_i5jx0")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9598924, 1.2792866, 0.10169554)
+size = Vector3(1.8, 0.97, 2.454)
+material = SubResource("StandardMaterial3D_i5jx0")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.92392135, 1.2792866, 0.10169554)
+size = Vector3(1.8, 0.97, 2.454)
+material = SubResource("StandardMaterial3D_i5jx0")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9598924, 0.11761737, 0.10169554)
+size = Vector3(1.8, 0.97, 2.454)
+material = SubResource("StandardMaterial3D_i5jx0")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.92392135, 0.11761737, 0.10169554)
+size = Vector3(1.8, 0.97, 2.454)
+material = SubResource("StandardMaterial3D_i5jx0")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9598924, -1.0626315, 0.10169554)
+size = Vector3(1.8, 0.97, 2.454)
+material = SubResource("StandardMaterial3D_i5jx0")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.92392135, -1.0626315, 0.10169554)
+size = Vector3(1.8, 0.97, 2.454)
+material = SubResource("StandardMaterial3D_i5jx0")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9598924, -2.2904074, 0.10169554)
+size = Vector3(1.8, 0.97, 2.454)
+material = SubResource("StandardMaterial3D_i5jx0")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.92392135, -2.2904074, 0.10169554)
+size = Vector3(1.8, 0.97, 2.454)
+material = SubResource("StandardMaterial3D_i5jx0")
+
+[node name="light" type="Node3D" parent="CSGBox3D"]
+
+[node name="bouton" type="CSGBox3D" parent="CSGBox3D/light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20367235, -0.03331566, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light/bouton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006095037, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CSGBox3D/light/bouton/OmniLight3D"]
+
+[node name="bouton7" type="CSGBox3D" parent="CSGBox3D/light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31625503, 0.54647076, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light/bouton7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005920261, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton3" type="CSGBox3D" parent="CSGBox3D/light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3971217, 0.1484114, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light/bouton3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010425091, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton6" type="CSGBox3D" parent="CSGBox3D/light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8603184, 0.34609818, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light/bouton6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004948616, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton10" type="CSGBox3D" parent="CSGBox3D/light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60503066, 0.049050093, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light/bouton10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005484134, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton11" type="CSGBox3D" parent="CSGBox3D/light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6711001, -0.25611663, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light/bouton11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0055162907, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton2" type="CSGBox3D" parent="CSGBox3D/light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5687005, -0.23614705, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light/bouton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light/bouton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton8" type="CSGBox3D" parent="CSGBox3D/light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0501333, -0.1424408, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton9" type="CSGBox3D" parent="CSGBox3D/light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6044663, 0.3882457, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton4" type="CSGBox3D" parent="CSGBox3D/light"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.13191795, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton5" type="CSGBox3D" parent="CSGBox3D/light"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.33412158, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="light7" type="Node3D" parent="CSGBox3D"]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 1.8526168, -0.8673935, 0)
+
+[node name="bouton" type="CSGBox3D" parent="CSGBox3D/light7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20367235, -0.03331566, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light7/bouton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006095037, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton7" type="CSGBox3D" parent="CSGBox3D/light7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31625503, 0.54647076, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light7/bouton7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005920261, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton3" type="CSGBox3D" parent="CSGBox3D/light7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3971217, 0.1484114, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light7/bouton3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010425091, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton6" type="CSGBox3D" parent="CSGBox3D/light7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8603184, 0.34609818, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light7/bouton6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004948616, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton10" type="CSGBox3D" parent="CSGBox3D/light7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60503066, 0.049050093, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light7/bouton10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005484134, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton11" type="CSGBox3D" parent="CSGBox3D/light7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6711001, -0.25611663, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light7/bouton11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0055162907, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton2" type="CSGBox3D" parent="CSGBox3D/light7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5687005, -0.23614705, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light7/bouton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light7/bouton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton8" type="CSGBox3D" parent="CSGBox3D/light7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0501333, -0.1424408, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light7/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light7/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton9" type="CSGBox3D" parent="CSGBox3D/light7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6044663, 0.3882457, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light7/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light7/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton4" type="CSGBox3D" parent="CSGBox3D/light7"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.13191795, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light7/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light7/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton5" type="CSGBox3D" parent="CSGBox3D/light7"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.33412158, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light7/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light7/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="light5" type="Node3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8714962, 1.0958478, 0)
+
+[node name="bouton" type="CSGBox3D" parent="CSGBox3D/light5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20367235, -0.03331566, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light5/bouton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006095037, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton7" type="CSGBox3D" parent="CSGBox3D/light5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31625503, 0.54647076, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light5/bouton7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005920261, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton3" type="CSGBox3D" parent="CSGBox3D/light5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3971217, 0.1484114, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light5/bouton3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010425091, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton6" type="CSGBox3D" parent="CSGBox3D/light5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8603184, 0.34609818, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light5/bouton6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004948616, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton10" type="CSGBox3D" parent="CSGBox3D/light5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60503066, 0.049050093, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light5/bouton10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005484134, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton11" type="CSGBox3D" parent="CSGBox3D/light5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6711001, -0.25611663, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light5/bouton11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0055162907, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton2" type="CSGBox3D" parent="CSGBox3D/light5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5687005, -0.23614705, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light5/bouton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light5/bouton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton8" type="CSGBox3D" parent="CSGBox3D/light5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0501333, -0.1424408, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light5/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light5/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton9" type="CSGBox3D" parent="CSGBox3D/light5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6044663, 0.3882457, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light5/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light5/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton4" type="CSGBox3D" parent="CSGBox3D/light5"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.13191795, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light5/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light5/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton5" type="CSGBox3D" parent="CSGBox3D/light5"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.33412158, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light5/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light5/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="light4" type="Node3D" parent="CSGBox3D"]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -0.018253326, 2.5654814, 0)
+
+[node name="bouton" type="CSGBox3D" parent="CSGBox3D/light4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20367235, -0.03331566, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light4/bouton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006095037, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton7" type="CSGBox3D" parent="CSGBox3D/light4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31625503, 0.54647076, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light4/bouton7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005920261, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton3" type="CSGBox3D" parent="CSGBox3D/light4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3971217, 0.1484114, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light4/bouton3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010425091, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton6" type="CSGBox3D" parent="CSGBox3D/light4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8603184, 0.34609818, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light4/bouton6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004948616, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton10" type="CSGBox3D" parent="CSGBox3D/light4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60503066, 0.049050093, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light4/bouton10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005484134, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton11" type="CSGBox3D" parent="CSGBox3D/light4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6711001, -0.25611663, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light4/bouton11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0055162907, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton2" type="CSGBox3D" parent="CSGBox3D/light4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5687005, -0.23614705, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light4/bouton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light4/bouton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton8" type="CSGBox3D" parent="CSGBox3D/light4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0501333, -0.1424408, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light4/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light4/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="CSGBox3D/light4/bouton8"]
+transform = Transform3D(0.99997014, 2.6219027e-12, 0.007731732, 2.6076918e-12, 1, -6.759295e-10, -0.007731732, 6.759294e-10, 0.99997014, -0.08882189, 2.6858916, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton9" type="CSGBox3D" parent="CSGBox3D/light4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6044663, 0.3882457, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light4/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light4/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton4" type="CSGBox3D" parent="CSGBox3D/light4"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.13191795, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light4/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light4/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton5" type="CSGBox3D" parent="CSGBox3D/light4"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.33412158, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light4/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light4/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="light8" type="Node3D" parent="CSGBox3D"]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -0.018253326, 0.24611664, 0)
+
+[node name="bouton" type="CSGBox3D" parent="CSGBox3D/light8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20367235, -0.03331566, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light8/bouton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006095037, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton7" type="CSGBox3D" parent="CSGBox3D/light8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31625503, 0.54647076, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light8/bouton7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005920261, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton3" type="CSGBox3D" parent="CSGBox3D/light8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6394397, 0.1484114, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light8/bouton3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010425091, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton6" type="CSGBox3D" parent="CSGBox3D/light8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8603184, 0.34609818, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light8/bouton6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004948616, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton10" type="CSGBox3D" parent="CSGBox3D/light8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60503066, 0.049050093, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light8/bouton10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005484134, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton11" type="CSGBox3D" parent="CSGBox3D/light8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6711001, -0.25611663, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light8/bouton11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0055162907, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton2" type="CSGBox3D" parent="CSGBox3D/light8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5687005, -0.23614705, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light8/bouton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light8/bouton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton8" type="CSGBox3D" parent="CSGBox3D/light8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0501333, -0.1424408, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light8/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light8/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="CSGBox3D/light8/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882189, 2.6858916, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton9" type="CSGBox3D" parent="CSGBox3D/light8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6044663, 0.3882457, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light8/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light8/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton4" type="CSGBox3D" parent="CSGBox3D/light8"]
+transform = Transform3D(-4.371138e-08, -1, 0, 1, -4.371138e-08, 0, 0, 0, 1, 1.0461373, 0.102208376, 1.2627213)
+size = Vector3(0.07231903, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light8/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light8/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton5" type="CSGBox3D" parent="CSGBox3D/light8"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.33412158, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light8/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light8/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="light6" type="Node3D" parent="CSGBox3D"]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -0.018253326, -0.95668936, 0)
+
+[node name="bouton" type="CSGBox3D" parent="CSGBox3D/light6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20367235, -0.03331566, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light6/bouton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006095037, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton7" type="CSGBox3D" parent="CSGBox3D/light6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31625503, 0.54647076, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light6/bouton7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005920261, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton3" type="CSGBox3D" parent="CSGBox3D/light6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3971217, 0.1484114, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light6/bouton3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010425091, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton6" type="CSGBox3D" parent="CSGBox3D/light6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8603184, 0.34609818, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light6/bouton6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004948616, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton10" type="CSGBox3D" parent="CSGBox3D/light6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60503066, 0.049050093, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light6/bouton10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005484134, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton11" type="CSGBox3D" parent="CSGBox3D/light6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6711001, -0.25611663, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light6/bouton11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0055162907, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton2" type="CSGBox3D" parent="CSGBox3D/light6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5687005, -0.23614705, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light6/bouton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light6/bouton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton8" type="CSGBox3D" parent="CSGBox3D/light6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0501333, -0.1424408, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light6/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light6/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton9" type="CSGBox3D" parent="CSGBox3D/light6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6044663, 0.3882457, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light6/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light6/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton4" type="CSGBox3D" parent="CSGBox3D/light6"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.13191795, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light6/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light6/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton5" type="CSGBox3D" parent="CSGBox3D/light6"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.33412158, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light6/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light6/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="light2" type="Node3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009344578, 1.1297219, 0)
+
+[node name="bouton" type="CSGBox3D" parent="CSGBox3D/light2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20367235, -0.03331566, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light2/bouton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006095037, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton7" type="CSGBox3D" parent="CSGBox3D/light2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31625503, 0.54647076, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light2/bouton7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005920261, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton3" type="CSGBox3D" parent="CSGBox3D/light2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3971217, 0.1484114, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light2/bouton3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010425091, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton6" type="CSGBox3D" parent="CSGBox3D/light2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8603184, 0.34609818, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light2/bouton6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004948616, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton10" type="CSGBox3D" parent="CSGBox3D/light2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60503066, 0.049050093, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light2/bouton10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005484134, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton11" type="CSGBox3D" parent="CSGBox3D/light2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6711001, -0.25611663, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light2/bouton11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0055162907, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton2" type="CSGBox3D" parent="CSGBox3D/light2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5687005, -0.23614705, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light2/bouton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light2/bouton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton8" type="CSGBox3D" parent="CSGBox3D/light2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0501333, -0.1424408, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light2/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light2/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton9" type="CSGBox3D" parent="CSGBox3D/light2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6044663, 0.3882457, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light2/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light2/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton4" type="CSGBox3D" parent="CSGBox3D/light2"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.13191795, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light2/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light2/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton5" type="CSGBox3D" parent="CSGBox3D/light2"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.33412158, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light2/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light2/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="light3" type="Node3D" parent="CSGBox3D"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.4580492, 1.9311273, 0)
+
+[node name="bouton" type="CSGBox3D" parent="CSGBox3D/light3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20367235, -0.03331566, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/bouton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006095037, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton7" type="CSGBox3D" parent="CSGBox3D/light3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31625503, 0.54647076, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/bouton7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005920261, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton6" type="CSGBox3D" parent="CSGBox3D/light3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7946801, 0.34609812, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/bouton6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004948616, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton10" type="CSGBox3D" parent="CSGBox3D/light3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60503066, 0.049050093, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/bouton10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005484134, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton2" type="CSGBox3D" parent="CSGBox3D/light3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5687005, -0.23614705, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/bouton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light3/bouton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="light3" type="Node3D" parent="CSGBox3D/light3"]
+transform = Transform3D(-1, 8.742277e-08, 0, -8.742277e-08, -1, 0, 0, 0, 1, 1.8207057, 1.114152, 0)
+
+[node name="bouton3" type="CSGBox3D" parent="CSGBox3D/light3/light3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3971217, 0.1484114, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light3/bouton3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010425091, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton6" type="CSGBox3D" parent="CSGBox3D/light3/light3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.99100494, 0.34609818, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light3/bouton6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004948616, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton11" type="CSGBox3D" parent="CSGBox3D/light3/light3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6711001, -0.25611663, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light3/bouton11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0055162907, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton8" type="CSGBox3D" parent="CSGBox3D/light3/light3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0955582, -0.14244081, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light3/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light3/light3/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton9" type="CSGBox3D" parent="CSGBox3D/light3/light3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6044663, 0.3882457, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light3/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light3/light3/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton4" type="CSGBox3D" parent="CSGBox3D/light3/light3"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.13191795, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light3/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light3/light3/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton5" type="CSGBox3D" parent="CSGBox3D/light3/light3"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.33412158, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light3/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light3/light3/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="light4" type="Node3D" parent="CSGBox3D/light3"]
+transform = Transform3D(1.3113416e-07, 1, 0, -1, 1.3113416e-07, 0, 0, 0, 1, -4.3940363, 2.2252238, 0)
+
+[node name="bouton3" type="CSGBox3D" parent="CSGBox3D/light3/light4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3971217, 0.1484114, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light4/bouton3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010425091, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton6" type="CSGBox3D" parent="CSGBox3D/light3/light4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.99100494, 0.34609818, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light4/bouton6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004948616, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton11" type="CSGBox3D" parent="CSGBox3D/light3/light4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6711001, -0.25611663, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light4/bouton11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0055162907, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton8" type="CSGBox3D" parent="CSGBox3D/light3/light4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0955582, -0.14244081, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light4/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light3/light4/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton9" type="CSGBox3D" parent="CSGBox3D/light3/light4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6044663, 0.3882457, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light4/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light3/light4/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton4" type="CSGBox3D" parent="CSGBox3D/light3/light4"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.13191795, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light4/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light3/light4/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton5" type="CSGBox3D" parent="CSGBox3D/light3/light4"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.33412158, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light4/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light3/light4/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="light5" type="Node3D" parent="CSGBox3D/light3"]
+transform = Transform3D(1.3113416e-07, 1, 0, -1, 1.3113416e-07, 0, 0, 0, 1, -4.2958484, 1.5479672, 0)
+
+[node name="bouton3" type="CSGBox3D" parent="CSGBox3D/light3/light5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3971217, 0.1484114, 1.2627213)
+size = Vector3(0.10568237, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light5/bouton3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010425091, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton6" type="CSGBox3D" parent="CSGBox3D/light3/light5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.99100494, 0.34609818, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light5/bouton6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004948616, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton11" type="CSGBox3D" parent="CSGBox3D/light3/light5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6711001, -0.25611663, 1.2627213)
+size = Vector3(0.25022888, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light5/bouton11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0055162907, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="bouton8" type="CSGBox3D" parent="CSGBox3D/light3/light5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0955582, -0.14244081, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light5/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light3/light5/bouton8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton9" type="CSGBox3D" parent="CSGBox3D/light3/light5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6044663, 0.3882457, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light5/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light3/light5/bouton9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton4" type="CSGBox3D" parent="CSGBox3D/light3/light5"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.13191795, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light5/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light3/light5/bouton4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="bouton5" type="CSGBox3D" parent="CSGBox3D/light3/light5"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1726904, 0.33412158, 1.2627213)
+size = Vector3(0.43174744, 0.04321289, 0.14453125)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D/light3/light5/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1083101, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.08804765
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGBox3D/light3/light5/bouton5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08882214, 0, 0.09989953)
+light_color = Color(0.55188257, 0.13355854, 0.13635504, 1)
+light_energy = 4.109
+light_specular = 0.0
+omni_range = 0.09443755
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(0.217387, 0, 0.3357721, 0, 0.4, 0, -0.3357721, 0, 0.217387, -2.5597582, -0.016092122, 1.0217562)
+curve = SubResource("Curve3D_j0snl")
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Path3D"]
+transform = Transform3D(0.99684435, -0.065762445, -0.004874289, 0.07923186, 0.821132, 0.122380115, -0.0048742294, -0.10157551, 0.9924714, 0.0029125214, -1.1920929e-07, 0.006858349)
+polygon = PackedVector2Array(0.029236794, 0.0686419, 0.06898403, -0.041038275, -0.0011944771, -0.078981996, -0.065849304, 0.028870702, -0.040801525, 0.11179721)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 0.02
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = true
+path_local = true
+path_continuous_u = true
+path_u_distance = 0.0
+path_joined = false
+smooth_faces = true
+material = SubResource("StandardMaterial3D_j0snl")
+
+[node name="Path3D4" type="Path3D" parent="."]
+transform = Transform3D(0.003479052, 0.39994878, 0.0053736814, -0.21735917, 0.006401582, -0.3357291, -0.3357721, 0, 0.21738702, -0.8218587, 3.992139, 1.0217562)
+curve = SubResource("Curve3D_j0snl")
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Path3D4"]
+transform = Transform3D(0.99684435, -0.065762445, -0.004874289, 0.07923186, 0.821132, 0.122380115, -0.0048742294, -0.10157551, 0.9924714, 0.0029125214, -1.1920929e-07, 0.006858349)
+polygon = PackedVector2Array(0.029236794, 0.0686419, 0.06898403, -0.041038275, -0.0011944771, -0.078981996, -0.065849304, 0.028870702, -0.040801525, 0.11179721)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 0.02
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = true
+path_local = true
+path_continuous_u = true
+path_u_distance = 0.0
+path_joined = false
+smooth_faces = true
+material = SubResource("StandardMaterial3D_j0snl")
+
+[node name="Path3D2" type="Path3D" parent="."]
+transform = Transform3D(0.217387, 0, 0.3357721, 0, 0.4, 0, -0.3357721, 0, 0.217387, 0.53380424, -1.4083984, 1.0060996)
+curve = SubResource("Curve3D_j0snl")
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Path3D2"]
+transform = Transform3D(0.68483204, -0.045162156, -0.0033486187, 0.054432284, 0.5639099, 0.08407514, -0.003348589, -0.06975667, 0.68182784, 0.4156716, 0.7929592, 0.6443987)
+polygon = PackedVector2Array(0.029236794, 0.0686419, 0.06898403, -0.041038275, -0.0011944771, -0.078981996, -0.065849304, 0.028870702, -0.040801525, 0.11179721)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 0.02
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = true
+path_local = true
+path_continuous_u = true
+path_u_distance = 0.0
+path_joined = false
+smooth_faces = true
+material = SubResource("StandardMaterial3D_j0snl")
+
+[node name="Path3D3" type="Path3D" parent="."]
+transform = Transform3D(0.18015833, -0.22385077, 0.27826932, 0.12165563, 0.33149788, 0.18790711, -0.3357721, 0, 0.21738702, 0.53380424, 0.8214402, 0.96997344)
+curve = SubResource("Curve3D_j0snl")
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Path3D3"]
+transform = Transform3D(0.68483204, -0.045162156, -0.0033486187, 0.054432284, 0.5639099, 0.08407514, -0.003348589, -0.06975667, 0.68182784, 0.4156716, 0.7929592, 0.6443987)
+polygon = PackedVector2Array(0.029236794, 0.0686419, 0.06898403, -0.041038275, -0.0011944771, -0.078981996, -0.065849304, 0.028870702, -0.040801525, 0.11179721)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 0.02
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = true
+path_local = true
+path_continuous_u = true
+path_u_distance = 0.0
+path_joined = false
+smooth_faces = true
+material = SubResource("StandardMaterial3D_j0snl")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Path3D3"]
