@@ -1,0 +1,123 @@
+[gd_scene load_steps=8 format=3 uid="uid://ctrfcrsjmd36a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d0xxp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_knnee"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.73, 0.59860003, 0.6205, 1)
+metallic = 0.32
+metallic_specular = 0.17
+roughness = 0.0
+refraction_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wndvp"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2c6x0"]
+emission_shape = 1
+emission_sphere_radius = 1.0
+initial_velocity_max = 0.099999994
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vcj71"]
+albedo_color = Color(0.9837684, 0.947028, 0.6071831, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_d0xxp"]
+material = SubResource("StandardMaterial3D_vcj71")
+size = Vector2(0.1, 0.1)
+orientation = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2c6x0"]
+
+[node name="back" type="Node3D"]
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Node3D"]
+transform = Transform3D(2.28, 0, 0, 0, 1, 0, 0, 0, 1, -0.112856746, 0.34645408, -0.37081128)
+radius = 0.5583406
+radial_segments = 11
+rings = 12
+material = SubResource("StandardMaterial3D_d0xxp")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Node3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.016371578, 0.660908, -0.036397338)
+operation = 2
+size = Vector3(1.1587524, 1, 1.243103)
+
+[node name="CSGSphere3D3" type="CSGSphere3D" parent="Node3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16790271, 0)
+radius = 0.49798727
+radial_segments = 11
+rings = 12
+material = SubResource("StandardMaterial3D_knnee")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Node3D/CSGSphere3D"]
+transform = Transform3D(0.128, 0, 0, 0, 0.29, 0, 0, 0, 0.29, 0.02849568, 0.23400092, -0.0069743097)
+radius = 0.49475953
+material = SubResource("StandardMaterial3D_wndvp")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Node3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1.44, 0, 0, 0, 1.44, 0, 0, 0, 1.44, -0.19347164, 0, 0)
+amount = 200
+sub_emitter = NodePath(".")
+lifetime = 0.08
+preprocess = 0.08
+speed_scale = 0.22
+randomness = 1.0
+collision_base_size = 0.0
+process_material = SubResource("ParticleProcessMaterial_2c6x0")
+draw_pass_1 = SubResource("QuadMesh_d0xxp")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Node3D"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+visible = false
+polygon = PackedVector2Array(0.96264434, 1.8367989, -0.0050761164, 1.2265596, 0.0116794845, -1.0476551, 0.98595, -1.2836959)
+smooth_faces = true
+material = SubResource("StandardMaterial3D_2c6x0")
+
+[node name="vide" type="CSGPolygon3D" parent="Node3D/CSGPolygon3D"]
+transform = Transform3D(0.94, 0, 0, 0, 0.94, 0, 0, 0, 0.86, 0.064789414, 0.0065116854, -0.082083024)
+operation = 2
+polygon = PackedVector2Array(0.96264434, 1.8367989, -0.0050761164, 1.2265596, 0.0116794845, -1.0476551, 0.98595, -1.2836959)
+smooth_faces = true
+material = SubResource("StandardMaterial3D_2c6x0")
+
+[node name="roues" type="CSGTorus3D" parent="Node3D"]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -0.8482068, -0.003472209, 0.11059964)
+inner_radius = 0.08911042
+outer_radius = 0.28440621
+sides = 13
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Node3D/roues"]
+transform = Transform3D(1.9106855e-15, 1, 4.371139e-08, 4.371139e-08, -4.371139e-08, 1, 1, 0, -4.371139e-08, 0.015855208, -6.2427574e-10, 0.0015734434)
+radius = 0.1
+
+[node name="roues2" type="CSGTorus3D" parent="Node3D/roues"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.574366e-08, 1.5040396)
+inner_radius = 0.08911042
+outer_radius = 0.28440621
+sides = 13
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Node3D/roues/roues2"]
+transform = Transform3D(1.9106855e-15, 1, 4.371139e-08, 4.371139e-08, -4.371139e-08, 1, 1, 0, -4.371139e-08, 0.015855208, -6.2427574e-10, 0.0015734434)
+radius = 0.1
+
+[node name="roues3" type="CSGTorus3D" parent="Node3D/roues"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4703484e-08, -0.8993623, 5.9604645e-08)
+inner_radius = 0.08911042
+outer_radius = 0.28440621
+sides = 13
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Node3D/roues/roues3"]
+transform = Transform3D(1.9106855e-15, 1, 4.371139e-08, 4.371139e-08, -4.371139e-08, 1, 1, 0, -4.371139e-08, 0.015855208, -6.2427574e-10, 0.0015734434)
+radius = 0.1
+
+[node name="roues2" type="CSGTorus3D" parent="Node3D/roues/roues3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.574366e-08, 1.5040396)
+inner_radius = 0.08911042
+outer_radius = 0.28440621
+sides = 13
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Node3D/roues/roues3/roues2"]
+transform = Transform3D(1.9106855e-15, 1, 4.371139e-08, 4.371139e-08, -4.371139e-08, 1, 1, 0, -4.371139e-08, 0.015855208, -6.2427574e-10, 0.0015734434)
+radius = 0.1

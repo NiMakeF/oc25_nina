@@ -1,0 +1,541 @@
+[gd_scene load_steps=41 format=3 uid="uid://cwdruqipqokpn"]
+
+[ext_resource type="PackedScene" uid="uid://bj7gfm3etim10" path="res://player.tscn" id="1_k6ciq"]
+[ext_resource type="Script" uid="uid://uoga35q40dvi" path="res://animation_player3.gd" id="2_putt3"]
+[ext_resource type="Script" uid="uid://i1b256uj6k6f" path="res://buttonfin.gd" id="3_8h3vm"]
+[ext_resource type="AudioStream" uid="uid://buxwwtqvvo5vj" path="res://freesound_community-footsteps-in-a-hallway-47842.mp3" id="4_0sdf7"]
+[ext_resource type="AudioStream" uid="uid://bnkcu8pe1qbdr" path="res://Aylex - Sinister (freetouse.com).mp3" id="5_dnh5p"]
+[ext_resource type="AudioStream" uid="uid://d2tex8qov423" path="res://sergequadrado-fairy-tale-loop-275534.mp3" id="6_g8yf7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_putt3"]
+albedo_color = Color(0.6188, 0.68, 0.64532, 1)
+metallic = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8h3vm"]
+albedo_color = Color(0.59054965, 0.72310585, 0.6451274, 1)
+metallic = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0sdf7"]
+albedo_color = Color(0.63085985, 0.7849521, 0.69748676, 1)
+metallic = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k6ciq"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.98, 0.078399986, 0.16855988, 1)
+metallic = 0.32
+metallic_specular = 0.17
+roughness = 0.0
+refraction_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g8yf7"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.88, 0.47519997, 0.71808016, 1)
+metallic = 0.32
+metallic_specular = 0.17
+roughness = 0.0
+refraction_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_752ut"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.92, 0.6808, 0.32200003, 1)
+metallic = 0.32
+metallic_specular = 0.17
+roughness = 0.0
+refraction_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qnh11"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.31882688, 0.078399986, 0.98, 1)
+metallic = 0.32
+metallic_specular = 0.17
+roughness = 0.0
+refraction_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s7g1q"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.078399986, 0.98, 0.19861344, 1)
+metallic = 0.32
+metallic_specular = 0.17
+roughness = 0.0
+refraction_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cgyq1"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.078399986, 0.9349201, 0.98, 1)
+metallic = 0.32
+metallic_specular = 0.17
+roughness = 0.0
+refraction_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8vfh2"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.98, 0.8748133, 0.078399986, 1)
+metallic = 0.32
+metallic_specular = 0.17
+roughness = 0.0
+refraction_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_umc0o"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_k6ciq"]
+emission_shape = 1
+emission_sphere_radius = 0.4
+spread = 109.346
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dnh5p"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_g8yf7"]
+material = SubResource("StandardMaterial3D_dnh5p")
+radius = 0.04
+height = 0.08
+
+[sub_resource type="Animation" id="Animation_0sdf7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:light_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.82, 0.33620003, 0.33620003, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_8h3vm"]
+resource_name = "couleuromni"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:light_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.99, 2.07, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.82, 0.33620003, 0.33620003, 1), Color(0.33620003, 0.82, 0.40876994, 1), Color(0.43295988, 0.33620003, 0.82, 1), Color(0.82, 0.33620003, 0.3442632, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_umc0o"]
+_data = {
+&"RESET": SubResource("Animation_0sdf7"),
+&"couleuromni": SubResource("Animation_8h3vm")
+}
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_752ut"]
+emission_shape = 1
+emission_sphere_radius = 0.2
+spread = 109.346
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qnh11"]
+emission_shape = 1
+emission_sphere_radius = 0.2
+spread = 109.346
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_s7g1q"]
+emission_shape = 1
+emission_sphere_radius = 0.2
+spread = 109.346
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cgyq1"]
+emission_shape = 1
+emission_sphere_radius = 0.25
+spread = 109.346
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_putt3"]
+emission_shape = 1
+emission_sphere_radius = 0.4
+spread = 109.346
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5samx"]
+albedo_color = Color(0.28811032, 0.67439735, 0.51509863, 1)
+emission_enabled = true
+emission = Color(0.38750845, 0.91, 0.31850004, 1)
+emission_energy_multiplier = 0.7
+
+[sub_resource type="BoxMesh" id="BoxMesh_3brsu"]
+material = SubResource("StandardMaterial3D_5samx")
+size = Vector3(0.2, 0.2, 0.2)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_umc0o"]
+
+[sub_resource type="Sky" id="Sky_dnh5p"]
+sky_material = SubResource("ProceduralSkyMaterial_umc0o")
+
+[sub_resource type="Environment" id="Environment_g8yf7"]
+background_mode = 2
+sky = SubResource("Sky_dnh5p")
+sky_custom_fov = 33.3
+ambient_light_source = 3
+ambient_light_color = Color(0.5231336, 0.69789535, 0.96391135, 1)
+ambient_light_energy = 3.35
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p6rlg"]
+
+[sub_resource type="TextMesh" id="TextMesh_lo52r"]
+material = SubResource("StandardMaterial3D_p6rlg")
+text = "Neurone's Schema"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gh0mg"]
+albedo_color = Color(0.6545, 0.85, 0.683825, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_1ed05"]
+material = SubResource("StandardMaterial3D_gh0mg")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3brsu"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.73, 0.59860003, 0.6205, 1)
+metallic = 0.32
+metallic_specular = 0.17
+roughness = 0.0
+refraction_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0sdf7"]
+size = Vector3(3.546997, 5.175049, 6.184845)
+
+[sub_resource type="BoxMesh" id="BoxMesh_umc0o"]
+material = SubResource("StandardMaterial3D_gh0mg")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_k6ciq")]
+
+[node name="sol" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06290388, -0.42700195, -2.5207424)
+use_collision = true
+size = Vector3(12, 0.1459961, 9.571228)
+material = SubResource("StandardMaterial3D_putt3")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="sol"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.2422705)
+operation = 1
+radius = 7.096542
+radial_segments = 24
+material = SubResource("StandardMaterial3D_8h3vm")
+
+[node name="dome" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08320665, -0.42700195, -6.040677)
+use_collision = true
+collision_layer = 3
+flip_faces = true
+radius = 12.0
+material = SubResource("StandardMaterial3D_0sdf7")
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="dome"]
+operation = 2
+radius = 11.708274
+material = SubResource("StandardMaterial3D_0sdf7")
+
+[node name="nbneuron" type="CSGSphere3D" parent="."]
+transform = Transform3D(2.08, 0, 0, 0, 2.08, 0, 0, 0, 2.08, -0.796957, 1.2789396, -9.633926)
+radial_segments = 14
+rings = 9
+material = SubResource("StandardMaterial3D_k6ciq")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="nbneuron"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5174043, 0.8541509, 0)
+radius = 0.26251152
+material = SubResource("StandardMaterial3D_g8yf7")
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="nbneuron"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5174043, -0.016619802, 0)
+radius = 0.26251152
+material = SubResource("StandardMaterial3D_752ut")
+
+[node name="CSGSphere3D3" type="CSGSphere3D" parent="nbneuron"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5174043, -1.0191238, 0)
+radius = 0.26251152
+material = SubResource("StandardMaterial3D_qnh11")
+
+[node name="CSGSphere3D4" type="CSGSphere3D" parent="nbneuron"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61878157, 1.8481895, 0)
+radius = 0.3296063
+material = SubResource("StandardMaterial3D_s7g1q")
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="nbneuron"]
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 1.3043277, -0.0070712566, 0.041033268)
+inner_radius = 0.001
+outer_radius = 0.46710908
+ring_sides = 8
+material = SubResource("StandardMaterial3D_cgyq1")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="nbneuron"]
+transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 2.5269237, 0, 0)
+material = SubResource("StandardMaterial3D_8vfh2")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="nbneuron"]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 1.4765425, 0, 0)
+radius = 0.075683594
+height = 2.1277466
+material = SubResource("StandardMaterial3D_umc0o")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="nbneuron"]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.9268317, 0, 0)
+radius = 0.075683594
+height = 1.1947327
+material = SubResource("StandardMaterial3D_umc0o")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="nbneuron"]
+transform = Transform3D(0.58572185, 0.8105122, 0, -0.8105122, 0.58572185, 0, 0, 0, 1, -0.9017466, -0.5566823, 0)
+radius = 0.075683594
+height = 1.3273468
+material = SubResource("StandardMaterial3D_umc0o")
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="nbneuron"]
+transform = Transform3D(-0.467899, 0.883782, 0, -0.883782, -0.467899, 0, 0, 0, 1, -0.9017466, 0.52505386, 0)
+radius = 0.075683594
+height = 1.3273468
+material = SubResource("StandardMaterial3D_umc0o")
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="nbneuron"]
+transform = Transform3D(-0.95477647, 0.2973249, 0, -0.2973249, -0.95477647, 0, 0, 0, 1, -0.3642841, 1.0734884, 0)
+radius = 0.075683594
+height = 1.3273468
+material = SubResource("StandardMaterial3D_umc0o")
+
+[node name="Label3D" type="Label3D" parent="nbneuron"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66740906, 0.20803308)
+billboard = 1
+modulate = Color(0.10488231, 0.30404866, 0.3338796, 1)
+outline_modulate = Color(0.56078434, 0.68235296, 0.75686276, 1)
+text = "Sum of weights 
+and the bias"
+
+[node name="Label3D6" type="Label3D" parent="nbneuron"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2464995, 0.6125437, 0.20803308)
+billboard = 1
+modulate = Color(0.10488231, 0.30404866, 0.3338796, 1)
+outline_modulate = Color(0.56078434, 0.68235296, 0.75686276, 1)
+text = "Function"
+
+[node name="Label3D7" type="Label3D" parent="nbneuron"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.474074, 0.6125437, 0.20803308)
+billboard = 1
+modulate = Color(0.10488231, 0.30404866, 0.3338796, 1)
+outline_modulate = Color(0.56078434, 0.68235296, 0.75686276, 1)
+text = "Output"
+
+[node name="Label3D2" type="Label3D" parent="nbneuron"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4952214, 1.1927956, 0.24277496)
+billboard = 1
+modulate = Color(0.10488231, 0.30404866, 0.3338796, 1)
+outline_modulate = Color(0.5588513, 0.68401957, 0.75576276, 1)
+text = "Input 1 
+(Becomes weight 1)"
+
+[node name="Label3D3" type="Label3D" parent="nbneuron"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4952214, 0.37439167, 0.23410988)
+billboard = 1
+modulate = Color(0.10488231, 0.30404866, 0.3338796, 1)
+outline_modulate = Color(0.5588513, 0.68401957, 0.75576276, 1)
+text = "Input 2
+(Becomes weight 2)"
+
+[node name="Label3D4" type="Label3D" parent="nbneuron"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4952214, -0.6447822, 0.23410988)
+billboard = 1
+modulate = Color(0.10488231, 0.30404866, 0.3338796, 1)
+outline_modulate = Color(0.5588513, 0.68401957, 0.75576276, 1)
+text = "Input n
+(Becomes weight n)"
+
+[node name="Label3D5" type="Label3D" parent="nbneuron"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.59398127, 2.1758785, 0.2710123)
+billboard = 1
+modulate = Color(0.10488231, 0.30404866, 0.3338796, 1)
+outline_modulate = Color(0.5588513, 0.68401957, 0.75576276, 1)
+text = "Bias
+"
+
+[node name="gpupi" type="Node3D" parent="nbneuron"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="nbneuron/gpupi"]
+transform = Transform3D(1.0400002, 0, 0, 0, 1.0400002, 0, 0, 0, 1.0400002, 0, -0.004013598, 0)
+amount = 80
+sub_emitter = NodePath(".")
+lifetime = 0.14
+explosiveness = 0.16
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_k6ciq")
+draw_pass_1 = SubResource("CapsuleMesh_g8yf7")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="nbneuron/gpupi/GPUParticles3D"]
+light_color = Color(0.82, 0.33620003, 0.33620003, 1)
+light_energy = 6.316
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+omni_range = 1.3353887
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="nbneuron/gpupi/GPUParticles3D"]
+transform = Transform3D(0.46227807, 0, 0, 0, 0.46227807, 0, 0, 0, 0.46227807, -1.45705, 0, 0)
+light_color = Color(0.82, 0.33620003, 0.33620003, 1)
+light_energy = 6.316
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+omni_range = 0.5231497
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="nbneuron/gpupi/GPUParticles3D"]
+transform = Transform3D(0.46227807, 0, 0, 0, 0.46227807, 0, 0, 0, 0.46227807, -1.4570501, 0.8342963, 0)
+light_color = Color(0.82, 0.33620003, 0.33620003, 1)
+light_energy = 6.316
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+omni_range = 0.5231497
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="nbneuron/gpupi/GPUParticles3D"]
+transform = Transform3D(0.46227807, 0, 0, 0, 0.46227807, 0, 0, 0, 0.46227807, -1.4570503, -1.0031273, 0)
+light_color = Color(0.82, 0.33620003, 0.33620003, 1)
+light_energy = 6.316
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+omni_range = 0.5231497
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="nbneuron/gpupi/GPUParticles3D"]
+transform = Transform3D(0.46227807, 0, 0, 0, 0.46227807, 0, 0, 0, 0.46227807, -0.5952531, 1.7990758, 0)
+light_color = Color(0.82, 0.33620003, 0.33620003, 1)
+light_energy = 6.316
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+omni_range = 0.65649325
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="nbneuron/gpupi/GPUParticles3D/OmniLight3D5"]
+libraries = {
+&"": SubResource("AnimationLibrary_umc0o")
+}
+script = ExtResource("2_putt3")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="nbneuron/gpupi"]
+transform = Transform3D(1.0400004, 0, 0, 0, 1.0400004, 0, 0, 0, 1.0400004, -1.5094736, -0.012988329, 0)
+amount = 80
+sub_emitter = NodePath(".")
+lifetime = 0.14
+explosiveness = 0.16
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_752ut")
+draw_pass_1 = SubResource("CapsuleMesh_g8yf7")
+
+[node name="GPUParticles3D3" type="GPUParticles3D" parent="nbneuron/gpupi"]
+transform = Transform3D(1.0400006, 0, 0, 0, 1.0400006, 0, 0, 0, 1.0400006, -1.5094737, 0.84704363, 0)
+amount = 80
+sub_emitter = NodePath(".")
+lifetime = 0.14
+explosiveness = 0.16
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_qnh11")
+draw_pass_1 = SubResource("CapsuleMesh_g8yf7")
+
+[node name="GPUParticles3D4" type="GPUParticles3D" parent="nbneuron/gpupi"]
+transform = Transform3D(1.0400008, 0, 0, 0, 1.0400008, 0, 0, 0, 1.0400008, -1.5094739, -1.0163617, 0)
+amount = 80
+sub_emitter = NodePath(".")
+lifetime = 0.14
+explosiveness = 0.16
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_s7g1q")
+draw_pass_1 = SubResource("CapsuleMesh_g8yf7")
+
+[node name="GPUParticles3D5" type="GPUParticles3D" parent="nbneuron/gpupi"]
+transform = Transform3D(1.0400008, 0, 0, 0, 1.0400008, 0, 0, 0, 1.0400008, -0.61874485, 1.8521729, 0)
+amount = 80
+sub_emitter = NodePath(".")
+lifetime = 0.14
+explosiveness = 0.16
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_cgyq1")
+draw_pass_1 = SubResource("CapsuleMesh_g8yf7")
+
+[node name="GPUParticles3D6" type="GPUParticles3D" parent="nbneuron/gpupi"]
+transform = Transform3D(1.0400008, 0, 0, 0, 1.0400008, 0, 0, 0, 1.0400008, 2.585469, 0.00010728836, 0)
+amount = 80
+sub_emitter = NodePath(".")
+lifetime = 0.14
+explosiveness = 0.16
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_putt3")
+draw_pass_1 = SubResource("BoxMesh_3brsu")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_g8yf7")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.39997244, 10.834526, -6.0954194)
+light_color = Color(0.5499535, 0.8060851, 0.6910683, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 2.106
+spot_range = 15.28409
+spot_angle = 66.156136
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 0, 0.40279365, -6.9547553)
+mesh = SubResource("TextMesh_lo52r")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D2"]
+transform = Transform3D(1.85, 0, 0, 0, 0.38, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("QuadMesh_1ed05")
+
+[node name="pannelle" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.06189978, 1.4531145, 1.4627357)
+use_collision = true
+collision_layer = 3
+collision_mask = 5
+size = Vector3(7.3506165, 0.16973877, 3.8058777)
+material = SubResource("StandardMaterial3D_3brsu")
+
+[node name="button" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37570953, 0.37039024, 1.4749521)
+collision_mask = 5
+script = ExtResource("3_8h3vm")
+target_scene = "uid://dw5nw2qqenubw"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2734985, 0.94714355, 0.47605896)
+shape = SubResource("BoxShape3D_0sdf7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="button"]
+transform = Transform3D(0.65, 0, 0, 0, 0.64, 0, 0, 0, 0.47, 0, 0.87038654, -0.23239183)
+mesh = SubResource("BoxMesh_umc0o")
+
+[node name="Label3D" type="Label3D" parent="button"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.505486, -0.30725384)
+billboard = 1
+modulate = Color(0.33798483, 0.64684796, 0.5660411, 1)
+outline_modulate = Color(0.091364585, 0.22468808, 0.19012454, 1)
+text = "Restart the game
+"
+font_size = 41
+outline_size = 20
+uppercase = true
+
+[node name="footsteps" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_0sdf7")
+volume_db = 22.326
+pitch_scale = 1.45
+
+[node name="font" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_dnh5p")
+
+[node name="sparcles" type="AudioStreamPlayer3D" parent="font"]
+stream = ExtResource("6_g8yf7")
+autoplay = true
+
+[connection signal="body_entered" from="button" to="button" method="_on_body_entered"]
+[connection signal="body_exited" from="button" to="button" method="_on_body_exited"]

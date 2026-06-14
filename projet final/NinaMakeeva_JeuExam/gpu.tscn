@@ -1,0 +1,436 @@
+[gd_scene load_steps=17 format=3 uid="uid://iga7e3qh6dk7"]
+
+[ext_resource type="PackedScene" uid="uid://bj7gfm3etim10" path="res://player.tscn" id="1_tgo4v"]
+[ext_resource type="PackedScene" uid="uid://c7247geslacmf" path="res://casette_gpu.tscn" id="1_uxivv"]
+[ext_resource type="Script" uid="uid://dg6b3r6jw56il" path="res://rotation.gd" id="3_5gw0g"]
+[ext_resource type="Script" uid="uid://dwbrkwj6mff5s" path="res://héliceR.gd" id="4_5gw0g"]
+[ext_resource type="Script" uid="uid://cl7jwb6ggipkc" path="res://rotateur_2.gd" id="4_klaxv"]
+[ext_resource type="AudioStream" uid="uid://buxwwtqvvo5vj" path="res://freesound_community-footsteps-in-a-hallway-47842.mp3" id="6_lqdu5"]
+[ext_resource type="AudioStream" uid="uid://b2f0phfsg5xxb" path="res://freesound_community-fan-loop-75075.mp3" id="7_5nxdn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_exsxm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5gw0g"]
+albedo_color = Color(0.67687863, 0.67687863, 0.67687863, 1)
+metallic = 1.0
+
+[sub_resource type="Sky" id="Sky_tgo4v"]
+
+[sub_resource type="Environment" id="Environment_exsxm"]
+background_mode = 2
+background_energy_multiplier = 1.48
+sky = SubResource("Sky_tgo4v")
+sky_custom_fov = 61.4
+ambient_light_source = 2
+ambient_light_color = Color(0.76556426, 0.6656899, 0.6250038, 1)
+ambient_light_energy = 0.39
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_klaxv"]
+albedo_color = Color(0.28301802, 0.28301802, 0.283018, 1)
+metallic = 0.7
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5nxdn"]
+margin = 0.0
+size = Vector3(0.45336914, 2.0302734, 0.18164063)
+
+[sub_resource type="PrismMesh" id="PrismMesh_fqpr6"]
+left_to_right = -1.0
+size = Vector3(1.03, 1.28, 0.21)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_lqdu5"]
+radius = 0.28710938
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_uxivv"]
+top_radius = 0.7
+bottom_radius = 0.7
+height = 9.821
+
+[node name="GPU" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0444326, 15.973125, 0.23516846)
+use_collision = true
+collision_layer = 3
+collision_mask = 4
+flip_faces = true
+size = Vector3(36.462337, 30.847996, 32.586548)
+material = SubResource("StandardMaterial3D_exsxm")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.048391342, 0.32677078, -0.0059051514)
+operation = 2
+use_collision = true
+collision_layer = 3
+collision_mask = 4
+size = Vector3(34.707138, 28.775902, 32.1044)
+material = SubResource("StandardMaterial3D_exsxm")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5733, -0.42004395, -0.6665726)
+operation = 2
+size = Vector3(15.24231, 12.805908, 25.712875)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.2, -4.791566, -6.1884947, -7.8227844)
+size = Vector3(28.89441, 1, 10)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGBox3D/CSGBox3D3"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.9493599, 2.1476698, -4.313343)
+radius = 0.25048828
+height = 28.29692
+material = SubResource("StandardMaterial3D_5gw0g")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGBox3D/CSGBox3D3"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.9493599, 2.1476698, 4.931714)
+radius = 0.25048828
+height = 28.29692
+material = SubResource("StandardMaterial3D_5gw0g")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.241623, -0.9724121, -7.746689)
+operation = 2
+size = Vector3(1, 9.282715, 9.744751)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_exsxm")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -5.9604645e-08, 1, 0, -1, -5.9604645e-08, 0, 9, 0)
+light_color = Color(0.6809711, 0.49934435, 0.45332378, 1)
+light_indirect_energy = 2.463
+light_volumetric_fog_energy = 1.366
+
+[node name="Player" parent="." instance=ExtResource("1_tgo4v")]
+transform = Transform3D(1, 0, 0, 0, 1, 1.5893256e-08, 0, -1.5893256e-08, 1, -16.170124, 9.759692, -6.944523)
+collision_mask = 7
+
+[node name="casette gpu" parent="." instance=ExtResource("1_uxivv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.526732, 15.5144615, -0.42134094)
+layers = 7
+use_collision = true
+collision_mask = 5
+size = Vector3(10.189941, 13.496338, 26.122162)
+material = SubResource("StandardMaterial3D_klaxv")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="casette gpu"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -0.16227388, 0.09170914, -6.926425)
+layers = 7
+operation = 2
+radius = 5.354492
+height = 10.027344
+sides = 17
+material = SubResource("StandardMaterial3D_klaxv")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="casette gpu"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9176636, 0.48114204, -0.0044288635)
+layers = 7
+operation = 2
+size = Vector3(7.9818115, 11.565087, 24.743462)
+material = SubResource("StandardMaterial3D_klaxv")
+
+[node name="rotateur 1" type="Node3D" parent="casette gpu"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42102242, -6.984536)
+script = ExtResource("3_5gw0g")
+
+[node name="Node3D" type="Node3D" parent="casette gpu/rotateur 1"]
+
+[node name="Area3D2" type="Area3D" parent="casette gpu/rotateur 1/Node3D" groups=["Player"]]
+transform = Transform3D(-1.2561932e-15, 9.966199e-08, 2.2800004, 2.2541757, 0.34219986, -1.4958031e-08, -0.3422, 2.2541742, -9.8533064e-08, -3.711082, 2.7147713, -1.8127546)
+collision_mask = 4
+script = ExtResource("4_5gw0g")
+target_scene = "uid://6f8popbfd5ji"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="casette gpu/rotateur 1/Node3D/Area3D2"]
+transform = Transform3D(-0.62660384, 0.7793379, 0, -0.77933776, -0.6266039, 0, 0, 0, 1, -0.44677067, -0.23251772, -0.0011570454)
+shape = SubResource("BoxShape3D_5nxdn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="casette gpu/rotateur 1/Node3D/Area3D2"]
+transform = Transform3D(1, 0, 0, -1.4901161e-08, 1, 0, 0, -7.1054274e-15, 1, 0, 0, 0)
+mesh = SubResource("PrismMesh_fqpr6")
+skeleton = NodePath("../../Area3D/rotateur 1")
+
+[node name="Area3D" type="Area3D" parent="casette gpu/rotateur 1/Node3D" groups=["Player"]]
+transform = Transform3D(-1.2561932e-15, 9.966199e-08, 2.2800004, 2.254176, 0.34219992, -1.4958033e-08, -0.34220007, 2.2541745, -9.8533064e-08, -3.711082, 2.7147713, -1.8127546)
+collision_layer = 7
+collision_mask = 4
+script = ExtResource("4_5gw0g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="casette gpu/rotateur 1/Node3D/Area3D"]
+transform = Transform3D(0.99231195, 0.123523906, -0.0076413304, -0.0051727444, -0.020293508, -0.9997802, -0.123651884, 0.992134, -0.019498533, -1.317689, 0.6152561, 0.8592746)
+shape = SubResource("CylinderShape3D_lqdu5")
+
+[node name="rotateur 1" type="MeshInstance3D" parent="casette gpu/rotateur 1/Node3D/Area3D" groups=["Player"]]
+transform = Transform3D(0.43852288, -8.992414e-16, 0.008014239, -0.008014262, -1.9171653e-08, 0.4385231, 3.503149e-10, -0.43859646, -1.9168455e-08, -1.4299822, 0.6124821, 2.0182114)
+layers = 3
+mesh = SubResource("CylinderMesh_uxivv")
+skeleton = NodePath("../../../..")
+
+[node name="f" type="Node3D" parent="casette gpu/rotateur 1"]
+transform = Transform3D(1, 0, 0, 0, 0.49999997, -0.86602545, 0, 0.86602545, 0.49999997, 0, -0.09413338, 0.30237198)
+
+[node name="Area3D2" type="Area3D" parent="casette gpu/rotateur 1/f" groups=["Player"]]
+transform = Transform3D(-1.2561932e-15, 9.966199e-08, 2.2800004, 2.2541757, 0.34219986, -1.4958031e-08, -0.3422, 2.2541742, -9.8533064e-08, -3.711082, 2.7147713, -1.8127546)
+collision_mask = 4
+script = ExtResource("4_5gw0g")
+target_scene = "uid://6f8popbfd5ji"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="casette gpu/rotateur 1/f/Area3D2"]
+transform = Transform3D(-0.62660384, 0.7793379, 0, -0.77933776, -0.6266039, 0, 0, 0, 1, -0.44677067, -0.23251772, -0.0011570454)
+shape = SubResource("BoxShape3D_5nxdn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="casette gpu/rotateur 1/f/Area3D2"]
+transform = Transform3D(1, 0, 0, -1.4901161e-08, 1, 0, 0, -7.1054274e-15, 1, 0, 0, 0)
+mesh = SubResource("PrismMesh_fqpr6")
+skeleton = NodePath("../../Area3D/rotateur 1")
+
+[node name="Area3D" type="Area3D" parent="casette gpu/rotateur 1/f" groups=["Player"]]
+transform = Transform3D(-1.2561932e-15, 9.966199e-08, 2.2800004, 2.254176, 0.34219992, -1.4958033e-08, -0.34220007, 2.2541745, -9.8533064e-08, -3.711082, 2.7147713, -1.8127546)
+collision_layer = 7
+collision_mask = 4
+script = ExtResource("4_5gw0g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="casette gpu/rotateur 1/f/Area3D"]
+transform = Transform3D(0.99231195, 0.123523906, -0.0076413304, -0.0051727444, -0.020293508, -0.9997802, -0.123651884, 0.992134, -0.019498533, -1.317689, 0.6152561, 0.8592746)
+shape = SubResource("CylinderShape3D_lqdu5")
+
+[node name="rotateur 1" type="MeshInstance3D" parent="casette gpu/rotateur 1/f/Area3D" groups=["Player"]]
+transform = Transform3D(0.43852288, -8.992414e-16, 0.008014239, -0.008014262, -1.9171653e-08, 0.4385231, 3.503149e-10, -0.43859646, -1.9168455e-08, -1.4299822, 0.6124821, 2.0182114)
+layers = 3
+mesh = SubResource("CylinderMesh_uxivv")
+skeleton = NodePath("../../../..")
+
+[node name="f2" type="Node3D" parent="casette gpu/rotateur 1"]
+transform = Transform3D(1, 0, 0, 0, -0.5, -0.8660253, 0, 0.8660253, -0.5, 0, -0.40932274, 0.35834694)
+
+[node name="Area3D2" type="Area3D" parent="casette gpu/rotateur 1/f2" groups=["Player"]]
+transform = Transform3D(-1.2561932e-15, 9.966199e-08, 2.2800004, 2.2541757, 0.34219986, -1.4958031e-08, -0.3422, 2.2541742, -9.8533064e-08, -3.711082, 2.7147713, -1.8127546)
+collision_mask = 4
+script = ExtResource("4_5gw0g")
+target_scene = "uid://6f8popbfd5ji"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="casette gpu/rotateur 1/f2/Area3D2"]
+transform = Transform3D(-0.62660384, 0.7793379, 0, -0.77933776, -0.6266039, 0, 0, 0, 1, -0.44677067, -0.23251772, -0.0011570454)
+shape = SubResource("BoxShape3D_5nxdn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="casette gpu/rotateur 1/f2/Area3D2"]
+transform = Transform3D(1, 0, 0, -1.4901161e-08, 1, 0, 0, -7.1054274e-15, 1, 0, 0, 0)
+mesh = SubResource("PrismMesh_fqpr6")
+skeleton = NodePath("../../Area3D/rotateur 1")
+
+[node name="Area3D" type="Area3D" parent="casette gpu/rotateur 1/f2" groups=["Player"]]
+transform = Transform3D(-1.2561932e-15, 9.966199e-08, 2.2800004, 2.254176, 0.34219992, -1.4958033e-08, -0.34220007, 2.2541745, -9.8533064e-08, -3.711082, 2.7147713, -1.8127546)
+collision_layer = 7
+collision_mask = 4
+script = ExtResource("4_5gw0g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="casette gpu/rotateur 1/f2/Area3D"]
+transform = Transform3D(0.99231195, 0.123523906, -0.0076413304, -0.0051727444, -0.020293508, -0.9997802, -0.123651884, 0.992134, -0.019498533, -1.317689, 0.6152561, 0.8592746)
+shape = SubResource("CylinderShape3D_lqdu5")
+
+[node name="rotateur 1" type="MeshInstance3D" parent="casette gpu/rotateur 1/f2/Area3D" groups=["Player"]]
+transform = Transform3D(0.43852288, -8.992414e-16, 0.008014239, -0.008014262, -1.9171653e-08, 0.4385231, 3.503149e-10, -0.43859646, -1.9168455e-08, -1.4299822, 0.6124821, 2.0182114)
+layers = 3
+mesh = SubResource("CylinderMesh_uxivv")
+skeleton = NodePath("../../../..")
+
+[node name="f3" type="Node3D" parent="casette gpu/rotateur 1"]
+transform = Transform3D(1, 0, 0, 0, -0.99999994, 8.742277e-08, 0, -8.742277e-08, -0.99999994, 0, -0.6229496, 0.13176966)
+
+[node name="Area3D2" type="Area3D" parent="casette gpu/rotateur 1/f3" groups=["Player"]]
+transform = Transform3D(-1.2561932e-15, 9.966199e-08, 2.2800004, 2.2541757, 0.34219986, -1.4958031e-08, -0.3422, 2.2541742, -9.8533064e-08, -3.711082, 2.7147713, -1.8127546)
+collision_mask = 4
+script = ExtResource("4_5gw0g")
+target_scene = "uid://6f8popbfd5ji"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="casette gpu/rotateur 1/f3/Area3D2"]
+transform = Transform3D(-0.62660384, 0.7793379, 0, -0.77933776, -0.6266039, 0, 0, 0, 1, -0.44677067, -0.23251772, -0.0011570454)
+shape = SubResource("BoxShape3D_5nxdn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="casette gpu/rotateur 1/f3/Area3D2"]
+transform = Transform3D(1, 0, 0, -1.4901161e-08, 1, 0, 0, -7.1054274e-15, 1, 0, 0, 0)
+mesh = SubResource("PrismMesh_fqpr6")
+skeleton = NodePath("../../Area3D/rotateur 1")
+
+[node name="Area3D" type="Area3D" parent="casette gpu/rotateur 1/f3" groups=["Player"]]
+transform = Transform3D(-1.2561932e-15, 9.966199e-08, 2.2800004, 2.254176, 0.34219992, -1.4958033e-08, -0.34220007, 2.2541745, -9.8533064e-08, -3.711082, 2.7147713, -1.8127546)
+collision_layer = 7
+collision_mask = 4
+script = ExtResource("4_5gw0g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="casette gpu/rotateur 1/f3/Area3D"]
+transform = Transform3D(0.99231195, 0.123523906, -0.0076413304, -0.0051727444, -0.020293508, -0.9997802, -0.123651884, 0.992134, -0.019498533, -1.317689, 0.6152561, 0.8592746)
+shape = SubResource("CylinderShape3D_lqdu5")
+
+[node name="rotateur 1" type="MeshInstance3D" parent="casette gpu/rotateur 1/f3/Area3D" groups=["Player"]]
+transform = Transform3D(0.43852288, -8.992414e-16, 0.008014239, -0.008014262, -1.9171653e-08, 0.4385231, 3.503149e-10, -0.43859646, -1.9168455e-08, -1.4299822, 0.6124821, 2.0182114)
+layers = 3
+mesh = SubResource("CylinderMesh_uxivv")
+skeleton = NodePath("../../../..")
+
+[node name="f4" type="Node3D" parent="casette gpu/rotateur 1"]
+transform = Transform3D(1, 0, 0, 0, -0.49999988, 0.8660254, 0, -0.8660254, -0.49999988, 0, -0.5099945, -0.14525127)
+
+[node name="Area3D2" type="Area3D" parent="casette gpu/rotateur 1/f4" groups=["Player"]]
+transform = Transform3D(-1.2561932e-15, 9.966199e-08, 2.2800004, 2.2541757, 0.34219986, -1.4958031e-08, -0.3422, 2.2541742, -9.8533064e-08, -3.711082, 2.7147713, -1.8127546)
+collision_mask = 4
+script = ExtResource("4_5gw0g")
+target_scene = "uid://6f8popbfd5ji"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="casette gpu/rotateur 1/f4/Area3D2"]
+transform = Transform3D(-0.62660384, 0.7793379, 0, -0.77933776, -0.6266039, 0, 0, 0, 1, -0.44677067, -0.23251772, -0.0011570454)
+shape = SubResource("BoxShape3D_5nxdn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="casette gpu/rotateur 1/f4/Area3D2"]
+transform = Transform3D(1, 0, 0, -1.4901161e-08, 1, 0, 0, -7.1054274e-15, 1, 0, 0, 0)
+mesh = SubResource("PrismMesh_fqpr6")
+skeleton = NodePath("../../Area3D/rotateur 1")
+
+[node name="Area3D" type="Area3D" parent="casette gpu/rotateur 1/f4" groups=["Player"]]
+transform = Transform3D(-1.2561932e-15, 9.966199e-08, 2.2800004, 2.254176, 0.34219992, -1.4958033e-08, -0.34220007, 2.2541745, -9.8533064e-08, -3.711082, 2.7147713, -1.8127546)
+collision_layer = 7
+collision_mask = 4
+script = ExtResource("4_5gw0g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="casette gpu/rotateur 1/f4/Area3D"]
+transform = Transform3D(0.99231195, 0.123523906, -0.0076413304, -0.0051727444, -0.020293508, -0.9997802, -0.123651884, 0.992134, -0.019498533, -1.317689, 0.6152561, 0.8592746)
+shape = SubResource("CylinderShape3D_lqdu5")
+
+[node name="rotateur 1" type="MeshInstance3D" parent="casette gpu/rotateur 1/f4/Area3D" groups=["Player"]]
+transform = Transform3D(0.43852288, -8.992414e-16, 0.008014239, -0.008014262, -1.9171653e-08, 0.4385231, 3.503149e-10, -0.43859646, -1.9168455e-08, -1.4299822, 0.6124821, 2.0182114)
+layers = 3
+mesh = SubResource("CylinderMesh_uxivv")
+skeleton = NodePath("../../../..")
+
+[node name="f5" type="Node3D" parent="casette gpu/rotateur 1"]
+transform = Transform3D(1, 0, 0, 0, 0.49999988, 0.8660254, 0, -0.8660254, 0.49999988, 0, -0.20046616, -0.25544643)
+
+[node name="Area3D2" type="Area3D" parent="casette gpu/rotateur 1/f5" groups=["Player"]]
+transform = Transform3D(-1.2561932e-15, 9.966199e-08, 2.2800004, 2.2541757, 0.34219986, -1.4958031e-08, -0.3422, 2.2541742, -9.8533064e-08, -3.711082, 2.7147713, -1.8127546)
+collision_mask = 4
+script = ExtResource("4_5gw0g")
+target_scene = "uid://6f8popbfd5ji"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="casette gpu/rotateur 1/f5/Area3D2"]
+transform = Transform3D(-0.62660384, 0.7793379, 0, -0.77933776, -0.6266039, 0, 0, 0, 1, -0.44677067, -0.23251772, -0.0011570454)
+shape = SubResource("BoxShape3D_5nxdn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="casette gpu/rotateur 1/f5/Area3D2"]
+transform = Transform3D(1, 0, 0, -1.4901161e-08, 1, 0, 0, -7.1054274e-15, 1, 0, 0, 0)
+mesh = SubResource("PrismMesh_fqpr6")
+skeleton = NodePath("../../Area3D/rotateur 1")
+
+[node name="Area3D" type="Area3D" parent="casette gpu/rotateur 1/f5" groups=["Player"]]
+transform = Transform3D(-1.2561932e-15, 9.966199e-08, 2.2800004, 2.254176, 0.34219992, -1.4958033e-08, -0.34220007, 2.2541745, -9.8533064e-08, -3.711082, 2.7147713, -1.8127546)
+collision_layer = 7
+collision_mask = 4
+script = ExtResource("4_5gw0g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="casette gpu/rotateur 1/f5/Area3D"]
+transform = Transform3D(0.99231195, 0.123523906, -0.0076413304, -0.0051727444, -0.020293508, -0.9997802, -0.123651884, 0.992134, -0.019498533, -1.317689, 0.6152561, 0.8592746)
+shape = SubResource("CylinderShape3D_lqdu5")
+
+[node name="rotateur 1" type="MeshInstance3D" parent="casette gpu/rotateur 1/f5/Area3D" groups=["Player"]]
+transform = Transform3D(0.43852288, -8.992414e-16, 0.008014239, -0.008014262, -1.9171653e-08, 0.4385231, 3.503149e-10, -0.43859646, -1.9168455e-08, -1.4299822, 0.6124821, 2.0182114)
+layers = 3
+mesh = SubResource("CylinderMesh_uxivv")
+skeleton = NodePath("../../../..")
+
+[node name="rotateur 2" type="MeshInstance3D" parent="casette gpu"]
+transform = Transform3D(0, -1.0000001, 0, 0.94242, 0, -0.33443195, 0.334432, 0, 0.9424199, 5.108054, 0.12304878, -6.92487)
+mesh = SubResource("CylinderMesh_uxivv")
+script = ExtResource("4_klaxv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="casette gpu/rotateur 2"]
+transform = Transform3D(2.279621, -0.041661263, 1.8210695e-09, 1.2561931e-15, -9.9661975e-08, -2.2800002, 0.041661352, 2.2796197, -9.964533e-08, 3.2853336, 4.6015224, -1.3366513)
+mesh = SubResource("PrismMesh_fqpr6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="casette gpu/rotateur 2"]
+transform = Transform3D(0.5799922, 0, -0.81462204, 0, 1, 0, 0.814622, 0, 0.57999223, 0, 0, 0)
+mesh = SubResource("CylinderMesh_uxivv")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="casette gpu/rotateur 2/MeshInstance3D2"]
+transform = Transform3D(2.2590883, -0.30809098, 1.3467084e-08, 2.529564e-16, -9.966197e-08, -2.28, 0.30809096, 2.2590883, -9.874788e-08, 3.694847, 4.6015224, -1.0758224)
+mesh = SubResource("PrismMesh_fqpr6")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="casette gpu/rotateur 2"]
+transform = Transform3D(-0.45448822, 0, -0.8907528, 0, 1, 0, 0.89075285, 0, -0.4544881, 0, 0, 0)
+mesh = SubResource("CylinderMesh_uxivv")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="casette gpu/rotateur 2/MeshInstance3D3"]
+transform = Transform3D(2.2590883, -0.30809098, 1.3467084e-08, 2.529564e-16, -9.966197e-08, -2.28, 0.30809096, 2.2590883, -9.874788e-08, 3.694847, 4.6015224, -1.0758224)
+mesh = SubResource("PrismMesh_fqpr6")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="casette gpu/rotateur 2"]
+transform = Transform3D(-0.99829346, 0, -0.058400355, 0, 1, 0, 0.05840031, 0, -0.9982933, 0, 0, 0)
+mesh = SubResource("CylinderMesh_uxivv")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="casette gpu/rotateur 2/MeshInstance3D4"]
+transform = Transform3D(2.2590883, -0.30809098, 1.3467084e-08, 2.529564e-16, -9.966197e-08, -2.28, 0.30809096, 2.2590883, -9.874788e-08, 3.694847, 4.6015224, -1.0758224)
+mesh = SubResource("PrismMesh_fqpr6")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="casette gpu/rotateur 2"]
+transform = Transform3D(-0.6538301, 0, 0.75664145, 0, 1, 0, -0.75664157, 0, -0.6538301, 0, 0, 0)
+mesh = SubResource("CylinderMesh_uxivv")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="casette gpu/rotateur 2/MeshInstance3D5"]
+transform = Transform3D(2.2590883, -0.30809098, 1.3467084e-08, 2.529564e-16, -9.966197e-08, -2.28, 0.30809096, 2.2590883, -9.874788e-08, 3.694847, 4.6015224, -1.0758224)
+mesh = SubResource("PrismMesh_fqpr6")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="casette gpu/rotateur 2"]
+transform = Transform3D(0.3060941, 0, 0.95200115, 0, 1, 0, -0.95200145, 0, 0.30609414, 0, 0, 0)
+mesh = SubResource("CylinderMesh_uxivv")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="casette gpu/rotateur 2/MeshInstance3D6"]
+transform = Transform3D(2.2590883, -0.30809098, 1.3467084e-08, 2.529564e-16, -9.966197e-08, -2.28, 0.30809096, 2.2590883, -9.874788e-08, 3.694847, 4.6015224, -1.0758224)
+mesh = SubResource("PrismMesh_fqpr6")
+
+[node name="light" type="Node" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.2776375, 12.368227, -8.629939)
+light_energy = 1.57
+light_indirect_energy = 0.0
+omni_range = 13.304106
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.2776375, 12.368227, 2.242651)
+light_color = Color(1, 0.26999998, 0.26999998, 1)
+light_energy = 7.554
+light_indirect_energy = 0.0
+omni_range = 12.879512
+
+[node name="SpotLight3D" type="SpotLight3D" parent="light"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 28.911894, -6.6325464)
+light_color = Color(1, 0.6, 0.6, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+spot_range = 20.991873
+spot_angle = 20.70202
+
+[node name="footsteps" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_lqdu5")
+volume_db = 22.326
+pitch_scale = 1.45
+
+[node name="fan" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_5nxdn")
+volume_db = 3.101
+autoplay = true
+
+[connection signal="body_entered" from="casette gpu/rotateur 1/Node3D/Area3D2" to="casette gpu/rotateur 1/Node3D/Area3D2" method="_on_body_entered"]
+[connection signal="body_entered" from="casette gpu/rotateur 1/Node3D/Area3D" to="casette gpu/rotateur 1/Node3D/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="casette gpu/rotateur 1/f/Area3D2" to="casette gpu/rotateur 1/f/Area3D2" method="_on_body_entered"]
+[connection signal="body_entered" from="casette gpu/rotateur 1/f/Area3D" to="casette gpu/rotateur 1/f/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="casette gpu/rotateur 1/f2/Area3D2" to="casette gpu/rotateur 1/f2/Area3D2" method="_on_body_entered"]
+[connection signal="body_entered" from="casette gpu/rotateur 1/f2/Area3D" to="casette gpu/rotateur 1/f2/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="casette gpu/rotateur 1/f3/Area3D2" to="casette gpu/rotateur 1/f3/Area3D2" method="_on_body_entered"]
+[connection signal="body_entered" from="casette gpu/rotateur 1/f3/Area3D" to="casette gpu/rotateur 1/f3/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="casette gpu/rotateur 1/f4/Area3D2" to="casette gpu/rotateur 1/f4/Area3D2" method="_on_body_entered"]
+[connection signal="body_entered" from="casette gpu/rotateur 1/f4/Area3D" to="casette gpu/rotateur 1/f4/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="casette gpu/rotateur 1/f5/Area3D2" to="casette gpu/rotateur 1/f5/Area3D2" method="_on_body_entered"]
+[connection signal="body_entered" from="casette gpu/rotateur 1/f5/Area3D" to="casette gpu/rotateur 1/f5/Area3D" method="_on_body_entered"]

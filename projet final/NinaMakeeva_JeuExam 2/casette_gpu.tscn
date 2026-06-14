@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://c7247geslacmf"]
+
+[node name="casette gpu" type="CSGBox3D"]
+size = Vector3(5.7822266, 13.496338, 26.122162)
